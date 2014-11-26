@@ -4251,7 +4251,7 @@ label {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  position: absolute;
+  width: 1060px;
 }
 .popup-confirm-creative .popup-header {
   background-color: #3b5998;
@@ -4518,7 +4518,6 @@ label {
   z-index: 5;
 }
 .list-step li.active {
-  z-index: 10;
   background-color: #3b5998;
   color: #fff;
 }
@@ -5051,9 +5050,15 @@ label {
 .contents.audience .audience-content .list-audience li.has-data .btn-group a:hover {
   opacity: 0.8;
 }
+.contents.audience .existing-content {
+  position: relative;
+}
+.contents.audience .existing-content h4 {
+  position: absolute;
+}
 .contents.audience .existing-content .select-wrap {
   *zoom: 1;
-  float: left;
+  margin-left: 140px;
 }
 .contents.audience .existing-content .select-wrap:before, .contents.audience .existing-content .select-wrap:after {
   display: table;
@@ -5064,11 +5069,13 @@ label {
 }
 .contents.audience .existing-content .select-existing {
   float: left;
+  width: 25%;
+  box-sizing: border-box;
   position: relative;
   z-index: 10;
   letter-spacing: 0;
   text-indent: 10px;
-  margin-left: 23px;
+  padding-right: 10px;
 }
 .contents.audience .existing-content .select-existing:first-child {
   margin-left: 0;
@@ -5080,7 +5087,7 @@ label {
   display: block;
   font-size: 13px;
   line-height: 23px;
-  width: 240px;
+  width: 100%;
   position: relative;
   font-weight: 400;
 }
@@ -5098,19 +5105,23 @@ label {
   display: none;
   position: absolute;
   width: 100%;
-  background-color: #fff;
   box-sizing: border-box;
-  border-left: 1px solid #c6c6c6;
-  border-right: 1px solid #c6c6c6;
+  margin-left: -10px;
+  padding-left: 10px;
   line-height: 25px;
   max-height: 208px;
   overflow-y: auto;
+}
+.contents.audience .existing-content .select-existing > ul > li {
+  background-color: #fff;
 }
 .contents.audience .existing-content .select-existing > ul > li > a,
 .contents.audience .existing-content .select-existing > ul > li > span {
   font-size: 12px;
   color: #404040;
   display: block;
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
 }
 .contents.audience .existing-content .select-existing > ul > li > ul {
   background-color: #f0f0f0;
@@ -5119,6 +5130,8 @@ label {
 .contents.audience .existing-content .select-existing > ul > li > ul a {
   display: block;
   font-weight: normal;
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
 }
 .contents.audience .existing-content .select-existing a {
   line-height: 25px;

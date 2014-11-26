@@ -34,7 +34,6 @@
 			z-index: 5;
 		}
 		&.active {
-			z-index: 10;
 			background-color: #3b5998;
 			color: #fff;
 			&:after {
@@ -429,17 +428,23 @@
 			}
 		}
 		.existing-content {
+			position : relative;
+			h4 {
+				position : absolute;
+			}
 			.select-wrap {
 				@include clfix;
-				float: left;
+				margin-left : 140px;
 			}
 			.select-existing {
-				float: left;
+				float : left;
+				width : 25%;
+				box-sizing : border-box;
 				position: relative;
 				z-index: 10;
 				letter-spacing: 0;
 				text-indent: 10px;
-				margin-left: 23px;
+				padding-right : 10px;
 				&:first-child {
 					margin-left: 0;
 				}
@@ -450,7 +455,7 @@
 					display: block;
 					font-size: 13px;
 					line-height: 23px;
-					width: 240px;
+					width: 100%;
 					position: relative;
 					font-weight : 400;
 					&:after {
@@ -469,21 +474,22 @@
 					display: none;
 					position: absolute;
 					width: 100%;
-					background-color: #fff;
 					box-sizing: border-box;
-					border: {
-						left: 1px solid #c6c6c6;
-						right: 1px solid #c6c6c6;
-					}
+					margin-left : -10px;
+					padding-left : 10px;
 					line-height: 25px;
 					max-height: 208px;
 					overflow-y: auto;
 					> li {
+						background-color : #fff;
+
 						> a,
 						> span {
 							font-size: 12px;
 							color: #404040;
 							display: block;
+							border-left : 1px solid #dadada;
+							border-right : 1px solid #dadada;
 						}
 
 						> ul {
@@ -492,6 +498,8 @@
 							a {
 								display: block;
 								font-weight: normal;
+								border-left : 1px solid #dadada;
+								border-right : 1px solid #dadada;
 							}
 						}
 					}

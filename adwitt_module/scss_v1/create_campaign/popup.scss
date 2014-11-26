@@ -1134,7 +1134,7 @@
 .popup-confirm-creative {
 	@include popup-default-style();
 	@include center-position;
-	position : absolute;
+	width : 1060px;
 	.btn-content {
 		text-align : center;
 		padding : 52px 0 61px;
