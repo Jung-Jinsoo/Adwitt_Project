@@ -8,11 +8,11 @@
 
 
 
-/* List Step Style  */
+// List Step Style
 
 .list-step {
-	box-shadow: $box-shadow-default;
 	@include clfix;
+	box-shadow: $box-shadow-default;
 	li {
 		background-color: #fff;
 		color: #3b5998;
@@ -47,6 +47,10 @@
 		}
 	}
 }
+
+
+
+
 
 /* Common Style */
 .container {

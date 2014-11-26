@@ -2194,6 +2194,14 @@ label {
   cursor: pointer;
 }
 
+.ajaxlodingimg {
+  width: 168px;
+  height: 124px;
+  overflow: hidden;
+  text-indent: -999em;
+  background: url(../../imgs/common/ajaxloding.gif) no-repeat;
+}
+
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default {
   border-radius: 5px;
@@ -4484,10 +4492,9 @@ label {
   margin-top: 10px;
 }
 
-/* List Step Style  */
 .list-step {
-  box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.1);
   *zoom: 1;
+  box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .list-step:before, .list-step:after {
   display: table;

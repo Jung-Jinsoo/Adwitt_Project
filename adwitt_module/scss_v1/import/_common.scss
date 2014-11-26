@@ -15,3 +15,13 @@ input[type="checkbox"],
 label {
 	cursor : pointer;
 }
+
+
+//Ajax Loading CSS
+.ajaxlodingimg {
+	width:168px;
+	height:124px;
+	overflow:hidden;
+	text-indent:-999em;
+	background:url(../../imgs/common/ajaxloding.gif) no-repeat
+}
