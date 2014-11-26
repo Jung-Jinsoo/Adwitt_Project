@@ -1,0 +1,539 @@
+@import "import/variable";
+@import "import/font";
+@import "import/mixin";
+@import "import/common";
+@import "import/header";
+@import "import/tooltipster";
+
+body {
+	background-color: #e7e7e7;
+	color: #404040;
+	letter-spacing: 0.5px;
+	min-width : 1440px;
+}
+
+select , input {
+	font-family : $base-font;
+}
+
+.container {
+	padding: 0 55px;
+	box-sizing : border-box;
+	.contents {
+		> .content {
+			margin-top : 9px;
+			padding: 24px 35px;
+			background-color: #fff;
+			box-shadow: $box-shadow-default;
+			.content-heading {
+				position : relative;
+			}
+			h4 {
+				color : #3b5998;
+				font-size : 15px;
+			}
+		}
+	}
+	.main-title {
+		box-shadow : $box-shadow-default;
+		background-color: #fff;
+		padding: 12px 10px;
+		margin-top : 20px;
+		h3 {
+			img {
+				margin-right : 5px;
+				vertical-align : -1px;
+			}
+			font-size : 20px;
+			color : #3b5998;
+		}
+	}
+}
+
+.input-date {
+	background: {
+		image: url(../../images_v1/icon/icon-calendar.png);
+		position: right 5px top 50%;
+		repeat: no-repeat;
+	}
+	border : 1px solid #c6c6c6;
+	padding : 3px 22px 3px 7px;
+	width: 200px;
+}
+
+.btn-auto-optimization-setting {
+	@include button-style(168,25,13,#404040);
+	position : absolute;
+	right : 0;
+	top : 0;
+}
+
+.table-manage-campaign-summary {
+	border : {
+		top : 2px solid #3b5998;
+		bottom : 2px solid #3b5998;
+	}
+	margin-top : 15px;
+
+	table {
+		width : 100%;
+	}
+	tr {
+		&:first-child {
+			th {
+				border-top : 0 none;
+			}
+			td {
+				border-top : 0 none;
+			}
+		}
+	}
+	th {
+		text-align : center;
+		font-weight : 400;
+		color : #3b5998;
+		border : {
+			top : 1px solid #dadada;
+			right : 1px solid #dadada;
+		}
+		box-sizing : border-box;
+		width : 85px;
+	}
+
+	td {
+		border-top : 1px solid #dadada;
+		padding-top : 7px;
+		padding-left : 19px;
+		font-weight : 300;
+		&.auto-optimization-status {
+			border-left : 1px solid #dadada;
+			width : 531px;
+			.title {
+				font-size: 13px;
+				font-weight: 700;
+				color: #3b5998;
+				.btn-view-detail {
+					@include button-style(100,25,13);
+					margin-left : 10px;
+				}
+			}
+		}
+	}
+
+	th,
+	td {
+		vertical-align : top;
+	}
+	input[type="text"]{
+		padding : 3px 7px;
+		border : 1px solid #c6c6c6;
+		color : #404040;
+	}
+
+	.name ,
+	.period {
+		th {
+			height : 38px;
+			vertical-align : middle;
+		}
+		td {
+			&[colspan="2"]{
+				line-height : 22px;
+			}
+		}
+
+	}
+
+	.budget {
+		th {
+			height : 58px;
+			vertical-align : middle;
+		}
+	}
+
+	.name {
+		td {
+			p {
+				font-weight : bold;
+			}
+			input[type="text"]{
+				width : 335px;
+			}
+		}
+	}
+	.period {
+		.date {
+			padding-bottom : 7px;
+
+			.input-date {
+				background : {
+					image : url(../../images_v1/icon/icon-calendar.png);
+					position : right 5px top 50%;
+					repeat : no-repeat;
+				}
+				width : 200px;
+				padding-right : 22px;
+			}
+			.input-hour ,
+			.input-min {
+				width : 32px;
+				text-align : center;
+			}
+			.input-hour {
+
+			}
+			.input-min {
+
+			}
+			.check-start-date {
+				margin-top : 5px;
+			}
+		}
+		.schedule {
+			border-top : 1px solid #dadada;
+			padding : {
+				top : 7px;
+				bottom : 7px;
+				left : 19px;
+			}
+			margin-left : -19px;
+			> p {
+				color : #3b5998;
+				font-weight : 400;
+			}
+			li {
+				margin-top : 5px;
+			}
+		}
+	}
+	.budget {
+		.col-left {
+			line-height : 22px;
+		}
+		.col-right {
+			border-left : 1px solid #dadada;
+			.spent {
+				float : left;
+			}
+			> div {
+				float : right;
+				> p {
+					margin-right : 20px;
+				}
+			}
+			p {
+				display : inline-block;
+				&.spent {
+					font-weight : bold;
+				}
+			}
+		}
+	}
+}
+
+.table-manage-campaign-performance {
+	border : {
+		top : 2px solid #3b5998;
+		bottom : 2px solid #3b5598;
+	}
+	margin-top : 15px;
+	table {
+		width : 100%;
+		tr {
+			&:first-child {
+				td {
+					strong {
+						margin-right : 20px;
+					}
+				}
+			}
+			&.period {
+				.btn-search {
+					@include button-style(100,25,13)
+				}
+				label {
+					&.label-yesterday {
+						margin-left : 20px;
+					}
+					cursor : pointer;
+					font-weight : 300;
+					input[type="radio"]{
+						margin-right :3px;
+					}
+					margin-right : 5px;
+				}
+			}
+			&.etc {
+				td {
+					border : {
+						top : 1px solid #dfdfdf;
+						left : 1px solid #dfdfdf;
+					}
+					&:first-child {
+						border-left : 0 none;
+					}
+				}
+			}
+
+		}
+
+		td {
+			height : 48px;
+			text-align : center;
+
+			&:first-child {
+				padding-left : 20px;
+				text-align : left;
+			}
+			strong {
+				color : #3b5598;
+				font-weight : 400;
+			}
+		}
+	}
+}
+
+
+
+
+.table-manage {
+	.inner {
+		box-sizing : border-box;
+		position : relative;
+	}
+	table {
+		overflow : hidden;
+	}
+	td {
+		padding-left : 10px;
+		padding-top : 10px;
+	}
+
+	thead {
+		tr {
+			td {
+
+				&:first-child {
+					.inner {
+						border : 1px solid #404040;
+					}
+				}
+
+				&:last-child {
+					.inner {
+						border : 3px solid #ececec;
+						cursor : pointer;
+						background : url(../../images_v1/bg/bg-add.png) no-repeat 50% 50%;
+					}
+				}
+
+				.inner {
+					width : 149px;
+					height : 115px;
+					border : 1px solid #3b5998;
+					.btn-group {
+						padding : 3px;
+						margin-bottom : 1px;
+						text-align : right;
+					}
+					.image {
+						width : 141px;
+						height : 75px;
+						background-color : #F5F5F5;
+						margin : 0 auto;
+						position :  relative;
+						> img {
+							@include center-position;
+							position : absolute;
+							max-width : 100%;
+							max-height : 100%;
+
+						}
+					}
+					.text {
+						font-size : 10px;
+						text-align : center;
+						line-height : 15px;
+						font-weight : 300;
+					}
+				}
+			}
+		}
+	}
+	// thead END
+
+	tfoot {
+		tr {
+			td {
+
+				&:first-child {
+					.inner {
+						border : 3px solid #ececec;
+						background : url(../../images_v1/bg/bg-add.png) no-repeat 50% 50% #fff;
+						cursor : pointer;
+					}
+				}
+
+				.inner {
+					width : 149px;
+					height : 203px;
+					background : url(../../images_v1/bg/table-manage-semi-circle-top.png) no-repeat 50% -1px #d6d6d6;
+					overflow : hidden;
+					p {
+						border-bottom : 1px solid #ffffff;
+						padding : 3px 0 3px 15px;
+						position : relative;
+						font-size : 10px;
+						span {
+							position : absolute;
+							right : 15px;
+							top : 3px;
+						}
+						&:first-child {
+							border-top : 1px solid #f6f8fc;
+							margin-top : 40px;
+							span {
+								font-weight : bold;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// tfoot END
+
+	tbody {
+		tr {
+			&.height-large {
+				td {
+					.inner {
+						height : 245px;
+					}
+				}
+			}
+			td {
+				vertical-align : top;
+				&:first-child {
+					.inner {
+						.btn-group {
+							text-align : right;
+						}
+						border : 1px solid #404040;
+						.ad-set-name {
+							font-size : 13px;
+							padding : 0 0 16px 10px;
+							span{
+								@include ellipsis;
+								max-width : 118px;
+								display : inline-block;
+								vertical-align : middle;
+							}
+							a {
+								vertical-align: middle;
+							}
+						}
+						.end-time ,
+						.budget ,
+						.spent ,
+						.remaining ,
+						.country ,
+						.gender ,
+						.age ,
+						.potential-reach {
+							position : relative;
+							padding : 3px 5px 4px 10px;
+							border-top : 1px solid #dadada;
+							font-size : 10px;
+							span {
+								position : absolute;
+								right : 5px;
+								top : 3px;
+								display : block;
+							}
+						}
+						.gender ,
+						.age {
+							border-top : 0 none;
+						}
+					}
+				}
+				&:last-child {
+					.inner {
+						background: url(../../images_v1/bg/table-manage-semi-circle-left.png) no-repeat -1px 50% #e0e6f4;
+						border : 1px solid transparent;
+					}
+					p {
+						border-bottom : 1px solid #ffffff;
+						padding : 3px 0 3px 15px;
+						position : relative;
+						font-size : 10px;
+						span {
+							position : absolute;
+							right : 15px;
+							top : 3px;
+							color : #3b5998;
+						}
+						&:first-child {
+							margin-top : 40px;
+							border-top : 1px solid #f6f8fc;
+							span {
+								font-weight : bold;
+							}
+						}
+					}
+				}
+				.inner {
+					width : 149px;
+					height : 225px;
+					border : 1px solid #bcbcbc;
+					.btn-group {
+						text-align : right;
+						padding : 3px 5px;
+					}
+					.ad-name {
+						font-size : 13px;
+						color : #3b5998;
+						padding : 1px 0 5px 10px;
+						span {
+							@include ellipsis;
+							max-width : 118px;
+							display : inline-block;
+							vertical-align : middle;
+						}
+						a {
+							vertical-align : middle;
+						}
+					}
+					.bid ,
+					.spent-not-first ,
+					.impression ,
+					.click ,
+					.ctr ,
+					.cpc ,
+					.app-install,
+					.link-click ,
+					.page-like,
+					.conversion,
+					.conversion-rate,
+					.cpa ,
+					.suggested-bid {
+						position : relative;
+						padding : 3px 5px 4px 10px;
+						border-top : 1px solid #dadada;
+						font-size : 10px;
+						span {
+							display : block;
+							position : absolute;
+							right : 5px;
+							top : 3px;
+						}
+					}
+
+
+				}
+			}
+		}
+	}
+	// tbody END
+}

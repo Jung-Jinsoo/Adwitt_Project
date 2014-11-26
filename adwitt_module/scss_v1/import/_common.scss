@@ -1,0 +1,17 @@
+body {
+	font: 12px/1.231 $base-font;
+	background-color: #e7e7e7;
+	color: #404040;
+	letter-spacing: 0.5px;
+	min-width: 1440px;
+}
+
+select , input {
+	font-family : $base-font;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+label {
+	cursor : pointer;
+}

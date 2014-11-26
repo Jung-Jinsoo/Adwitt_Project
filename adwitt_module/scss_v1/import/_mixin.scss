@@ -1,0 +1,523 @@
+@mixin clfix {
+	*zoom: 1;
+	&:before, &:after {
+		display: table;
+		content: '';
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin ellipsis {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+}
+
+@mixin tab-menu($width : 69, $line-height : 23, $bg-normal : #fff) {
+	@include clfix;
+	border-bottom : 1px solid #d4d4d4;
+	li {
+		float : left;
+		a {
+			background-color : $bg-normal;
+			border-radius : 5px 5px 0 0;
+			color : #3b5998;
+			display : block;
+			text-align : center;
+			width : $width+px;
+			line-height : $line-height+px;
+			&.active ,
+			&:hover {
+				color : #fff;
+				background-color : #3b5998;
+			}
+		}
+	}
+}
+
+@mixin list-popup-creative-image($product-type : normal) {
+	@include clfix;
+	padding: 10px;
+	border: 1px solid #c6c6c6;
+	overflow: auto;
+	box-sizing: border-box;
+	max-height: 295px;
+	> ul {
+		margin: -10px 0 0 -10px;
+	}
+	li {
+		float: left;
+		background-color: #f5f5f5;
+		margin: 10px 0 0 10px;
+		position: relative;
+		cursor: pointer;
+
+		&.active {
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(56, 84, 144, .2);
+			}
+		}
+		.image {
+			width: 85px;
+			height: 68px;
+			overflow: hidden;
+			position: relative;
+			> img {
+				max-width: 85px;
+				max-height: 68px;
+				@include center-position();
+			}
+		}
+		.text-image-size {
+			text-align: center;
+			background-color: #ebebeb;
+			font-size: 10px;
+			font-weight : 300;
+			line-height : 17px;
+		}
+
+		@if $product-type == normal {
+			.text-number-ordered {
+				@include center-position();
+				display: block;
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				background-color: #fff;
+				color: #3b5998;
+				font-weight: bold;
+				text-align: center;
+				line-height: 20px;
+
+			}
+		}
+		@else {
+			&.active {
+				outline : 2px solid #3b5598;
+			}
+		}
+	}
+}
+
+@mixin icon-style-select {
+	position : relative;
+	z-index : 5;
+	// 공통부분
+
+	// Create New 일때
+	&.create-new {
+		.depth-1 {
+			float : left;
+			position : relative;
+			margin-left : 10px;
+			&.has-child {
+				&:after {
+					content : '';
+					display : block;
+					position : absolute;
+					width : 9px;
+					height : 7px;
+					background-image : url(../../images_v1/icon/icon-arrow-bot.png);
+					right : 12px;
+					top : 17px;
+				}
+				&:hover,
+				&.active{
+					&:after {
+						background-image : url(../../images_v1/icon/icon-arrow-bot-white.png);
+					}
+				}
+				&.clicked {
+					> ul {
+						display : block;
+					}
+					&:after {
+						background-image : url(../../images_v1/icon/icon-arrow-top.png);
+					}
+				}
+			}
+			&:first-child {
+				margin-left : 0;
+			}
+
+			&:hover ,
+			&.active,
+			&.clicked{
+				> a {
+					background-color : #404040;
+					color : #fff;
+				}
+			}
+			a {
+				font-size : 14px;
+				&.checked {
+					&:before {
+						content : '';
+						display : inline-block;
+						background-image : url(../../images_v1/icon/icon-checked.png);
+						width : 13px;
+						height : 10px;
+						margin-right : 5px;
+					}
+				}
+			}
+
+			> a{
+				border : 1px solid #c6c6c6;
+				border-radius : 30px;
+				overflow : hidden;
+				display : block;
+				width : 272px;
+				height : 42px;
+				text-align : center;
+				line-height : 40px;
+				background-color : #fff;
+				color : #404040;
+				box-sizing : border-box;
+			}
+			> ul {
+				display : none;
+				position : absolute;
+				left : 18px;
+				li {
+					border : {
+						left : 1px solid #c5c5c5;
+						right : 1px solid #c5c5c5;
+						bottom : 1px solid #c5c5c5;
+					}
+					width : 233px;
+					height : 40px;
+				}
+				a {
+					background-color : #fff;
+					display : block;
+					height : 100%;
+					width : 100%;
+					text-align : center;
+					line-height : 40px;
+					color : #404040;
+					&:hover {
+						background-color : #dde3f0;
+					}
+				}
+			}
+		}
+	}
+
+	// Use Existing 일때
+	&.use-existing {
+		.depth-1 {
+			float : left;
+			position : relative;
+			margin-left : 10px;
+			&.has-child {
+				&:after {
+					content : '';
+					display : block;
+					position : absolute;
+					width : 9px;
+					height : 7px;
+					background-image : url(../../images_v1/icon/icon-arrow-bot.png);
+					right : 12px;
+					top : 17px;
+				}
+				&:hover,
+				&.active{
+					&:after {
+						background-image : url(../../images_v1/icon/icon-arrow-bot-white.png);
+					}
+				}
+				&.clicked{
+					> ul {
+						display : block;
+					}
+					&:after {
+						background-image : url(../../images_v1/icon/icon-arrow-top.png);
+					}
+				}
+			}
+			&:first-child {
+				margin-left : 0;
+			}
+			&:hover ,
+			&.active,
+			&.clicked{
+				> a {
+					background-color : #404040;
+					color : #fff;
+				}
+			}
+			a {
+				font-size : 14px;
+				&.checked {
+					&:after {
+						content : '';
+						display : inline-block;
+						background-image : url(../../images_v1/icon/icon-checked.png);
+						width : 13px;
+						height : 10px;
+						float : left;
+						margin : 9px 5px 0 0;
+					}
+				}
+			}
+
+			> a{
+				border : 1px solid #c6c6c6;
+				border-radius : 30px;
+				display : block;
+				width : 270px;
+				height : 40px;
+				text-align : center;
+				line-height : 40px;
+				background-color : #fff;
+				color : #404040;
+				font-weight : bold;
+				position : relative;
+			}
+			> ul {
+				display : none;
+				position : absolute;
+				left : 17px;
+				max-height : 200px;
+				overflow : {
+					y : auto;
+					x : hidden;
+				}
+
+				li {
+					border : {
+						left : 1px solid #c5c5c5;
+						right : 1px solid #c5c5c5;
+						bottom : 1px solid #c5c5c5;
+					}
+					width : 237px;
+					height : 24px;
+				}
+				a {
+					font-size : 12px;
+					background-color : #fff;
+					display : block;
+					height : 100%;
+					width : 100%;
+					text-align : left;
+					line-height : 24px;
+					color : #404040;
+					span {
+						display : inline-block;
+						vertical-align : middle;
+						width : 170px;
+						@include ellipsis;
+					}
+
+					&:hover {
+						background-color : #dde3f0;
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+@mixin button-style($width : 130,$height:32,$font-size : 18,$bg-color : #3b5998, $font-color : #fff){
+	background-color : $bg-color;
+	border-radius : ($height/2)+px;
+	box-sizing : border-box;
+	color : $font-color;
+	font-size : $font-size+px;
+//	font-weight : bold;
+	height : $height+px;
+	line-height : $height+px;
+	overflow : hidden;
+	text-align : center;
+	width : $width+px;
+	font-family : $base-font;
+}
+
+@mixin button-type-radio($is_margin-right : true) {
+	display : inline-block;
+	line-height : 23px;
+	border : 1px solid #bcbcbc;
+	font-size : 13px;
+	border-radius : 12px;
+	cursor : pointer;
+	padding : 0 10px 0 6px;
+	vertical-align : middle;
+	@if $is_margin-right == true {
+		margin-right : 20px;
+	}
+}
+
+@mixin radioCustom (){
+	border-radius: 20px;
+	border: 1px solid #bcbcbc;
+	box-sizing: border-box;
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	overflow: hidden;
+	padding: 0 8px 0 7px;
+	position: relative;
+	vertical-align: middle;
+	> input {
+		position : absolute;
+		width : 15px;
+		height : 13px;
+		left : 0;
+		opacity : 0;
+		+ label {
+			font-size : 11px;
+			position : relative;
+			cursor : pointer;
+			&:before {
+				background : {
+					image : url(../../images_v1/button/input.png);
+					position : 0 -13px;
+				}
+				content : '';
+				display : inline-block;
+				height : 13px;
+				overflow : hidden;
+				vertical-align : middle;
+				width : 15px;
+				position : relative;
+				top : -2px;
+
+			}
+		}
+		&:checked {
+			+ label{
+				&:before {
+					background-position : 0 0;
+				}
+			}
+		}
+	}
+}
+
+@mixin popup-default-style(){
+	padding : 20px;
+	background-color : #fff;
+	border : 1px solid #cbcbcb;
+	z-index : 100;
+	box-sizing : border-box;
+	// 2014-11-11 Jinsoo.
+	// 임시로 넣은 position : relative
+	// 후에 position : absolute 로 변경할것
+	//	position : relative;
+	.popup-header {
+		background-color : #3b5998;
+		height : 45px;
+		h5 {
+			font-size : 15px;
+			color : #fff;
+			text-indent : 20px;
+			line-height : 45px;
+		}
+	}
+	.popup-container {
+
+	}
+	.popup-footer {
+		text-align : center;
+		padding-top : 35px;
+		border-top : 2px solid #3b5998;
+		button {
+			&:nth-child(2){
+				margin-left : 10px;
+			}
+		}
+	}
+	.btn-popup-close {
+		display : block;
+		position : absolute;
+		width : 13px;
+		height : 13px;
+		background-image : url(../../images_v1/button/btn-popup-close.png);
+		right : 38px;
+		top : 37px;
+		text-indent : -9999px;
+		overflow : hidden;
+	}
+}
+
+@mixin bubble-tooltip($arrow-position) {
+	background-color : #404040;
+	position : absolute;
+	padding : 9px 12px;
+	border-radius : 5px;
+	p {
+		font-size : 11px;
+		color : #fff;
+		font-weight : 300;
+	}
+	&:before {
+		content : '';
+		display : block;
+		position : absolute;
+
+		@if $arrow-position == top {
+			left : 50%;
+			top : -5px;
+			margin-left : -5px;
+			border : {
+				bottom : 6px solid #404040;
+				left : 5px solid transparent;
+				right : 5px solid transparent;
+			}
+		}
+		@else if $arrow-position == right {
+			right : -5px;
+			top : 50%;
+			margin-top : -5px;
+			border : {
+				left : 6px solid #404040;
+				top : 5px solid transparent;
+				bottom : 5px solid transparent;
+			}
+		}
+		@else if $arrow-position == bottom {
+			bottom : -5px;
+			left : 50%;
+			margin-left : -5px;
+			border : {
+				top : 6px solid #404040;
+				left : 5px solid transparent;
+				right : 5px solid transparent;
+			}
+		}
+		@else {
+			left : -5px;
+			top : 50%;
+			margin-top : -5px;
+			border : {
+				right : 6px solid #404040;
+				top : 5px solid transparent;
+				bottom : 5px solid transparent;
+			}
+		}
+	}
+}
+
+@mixin center-position {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}

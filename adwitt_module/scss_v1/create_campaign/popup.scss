@@ -1,0 +1,1249 @@
+/* 오직 Create Campaign 전용 Popup 스타일 넣는곳 */
+
+#jqueryTest {
+	position : fixed;
+	right : 0;
+	bottom : 10px;
+	z-index : 999;
+	button {
+		border : 1px solid #ccc;
+		background-color : #fff;
+		padding : 5px 10px;
+		box-shadow : $box-shadow-default;
+	}
+}
+
+.popup-dim-overlay {
+	position : fixed;
+	left : 0;
+	top : 0;
+	width : 100%;
+	height : 100%;
+	z-index : 99;
+	background-color : rgba(0,0,0,.5);
+}
+
+.popup-creative {
+	@include popup-default-style;
+	@include center-position;
+	width : 1058px;
+	position : absolute;
+	textarea {
+		resize: none;
+		width: 100%;
+		border: 1px solid #c6c6c6;
+		padding: 10px;
+		box-sizing: border-box;
+		height: 65px;
+		font-family: $base-font;
+	}
+
+
+	// 탭메뉴 , 탭 , Tab , Tab Menu
+	.tab-popup-creative {
+		@include tab-menu(69,23,#e4e4e4);
+		li {
+			margin-left : 1px;
+			&:first-child {
+				margin-left : 0;
+			}
+		}
+	}
+
+	// 멀티프로덕트 , Multi Product
+	.multi-product-content {
+
+		// 텍스트, 텍스트아레아 , Textarea
+		.text-box {
+
+		}
+		// 웹사이트 URL , Website URL
+		.website-url-box {
+			margin-top : 12px;
+			margin-bottom : 16px;
+			.popup-content-heading {
+				float : left;
+			}
+			.input-website-url {
+				overflow: hidden;
+				input[type="text"] {
+					width: 100%;
+					padding : 3px 7px;
+				}
+			}
+		}
+		// 이미지 , Image
+		.list-image-box {
+			.popup-content-heading {
+				margin-bottom : 5px;
+			}
+			.list-image {
+				@include list-popup-creative-image(multi-product);
+			}
+		}
+		// 테이블 , Table
+		.table-multi-product {
+			@include clfix;
+			margin-top  :22px;
+			.table-multi-product-left {
+				float : left;
+			}
+
+			.table-multi-product-right{
+				overflow : hidden;
+				table {
+					width : 100%;
+				}
+			}
+
+			.table-multi-product-left {
+				.image {
+					td {
+						padding-bottom : 18px;
+						p {
+							line-height : 85px;
+						}
+					}
+				}
+				.link-url ,
+				.description ,
+				.caption {
+					td {
+						padding-bottom : 5px;
+						p {
+							line-height : 25px;
+						}
+					}
+				}
+				td {
+					width : 218px;
+					text-align : left;
+					p {
+						font-size : 11px;
+						color : #404040;
+						strong {
+							font-weight : normal;
+							color : #3b5998;
+							font-size : 13px;
+						}
+					}
+				}
+			}
+			.table-multi-product-right {
+				td {
+					text-align : center;
+					width : 256px;
+				}
+
+				.image {
+					td {
+						padding-bottom : 18px;
+					}
+					div {
+						width : 85px;
+						height : 85px;
+						overflow : hidden;
+						box-sizing : border-box;
+						border : 1px solid #c6c6c6;
+						margin : 0 auto;
+						cursor : pointer;
+						position : relative;
+						background : url(../../images_v1/bg/bg-add.png) no-repeat 50% 50%;
+						> img {
+							max-width : 85px;
+							max-height : 85px;
+							position : absolute;
+							@include center-position;
+						}
+					}
+				}
+				.link-url ,
+				.description ,
+				.caption {
+					td {
+						padding-bottom : 5px;
+						vertical-align : top;
+					}
+					input[type="text"] {
+						width : 232px;
+						padding : 3px 7px;
+					}
+				}
+			}
+		}
+	}
+
+	// 오퍼 클라임 , Offer Claim
+	.offer-claim-content {
+
+		// 공통
+		input[type="text"]{
+			padding : 3px 7px;
+			border : 1px solid #c6c6c6;
+		}
+		.row {
+			@include clfix;
+		}
+
+
+		// 타이틀 , Title
+
+		.title-box {
+			margin-bottom : 9px;
+			input[type="text"]{
+				width : 100%;
+			}
+		}
+
+		// 설명 , Description
+		.description-box {
+			margin-bottom : 9px;
+		}
+
+		.list-image-box {
+			.popup-content-heading {
+				margin-bottom : 5px;
+			}
+			.list-image {
+				@include list-popup-creative-image();
+			}
+		}
+
+		.expiration-date-box,
+		.reminder-box ,
+		.claims-limit-box {
+			float : left;
+			width : 33.3333%;
+			margin-top : 26px;
+			margin-bottom : 20px;
+			.popup-content-heading {
+				display : inline-block;
+
+			}
+
+		}
+
+		.expiration-date-box {
+			.input-date {
+				background : {
+					image : url(../../images_v1/icon/icon-calendar.png);
+					position : right 5px top 50%;
+					repeat : no-repeat;
+				}
+				width : 200px;
+				padding-right : 22px;
+			}
+		}
+		.reminder-box {
+			text-align : center;
+			.input-date {
+				background : {
+					image : url(../../images_v1/icon/icon-calendar.png);
+					position : right 5px top 50%;
+					repeat : no-repeat;
+				}
+				width : 200px;
+				padding-right : 22px;
+			}
+			.input-hour,
+			.input-min {
+				width : 32px;
+				text-align : center;
+			}
+		}
+		.claims-limit-box {
+			text-align : right;
+		}
+
+		.terms-conditions-box {
+			margin-bottom : 9px;
+			input[type="text"]{
+				width : 100%;
+			}
+		}
+
+		.redemption-url-box ,
+		.redemption-code-box {
+			float : left;
+			width : 50%;
+			box-sizing : border-box;
+			margin-bottom : 16px;
+			input[type="text"]{
+				width : 100%;
+			}
+		}
+		.redemption-url-box {
+			padding-right : 7px;
+		}
+		.redemption-code-box {
+			padding-left : 8px;
+		}
+		.more-option {
+			a {
+				background-color : #f1f1f1;
+				border-radius : 12.5px;
+				color : #3b5998;
+				display : block;
+				font-size : 13px;
+				line-height : 25px;
+				box-sizing : border-box;
+				padding-left : 20px;
+				&.active {
+					background-color : #3b5998;
+					color : #fff;
+				}
+			}
+			.row {
+				padding : 0 24px;
+			}
+			.bar-code-box ,
+			.bar-code-format {
+				margin-top : 11px;
+				.popup-content-heading {
+					display : inline-block;
+					vertical-align : middle;
+				}
+			}
+			.bar-code-box {
+				float : left;
+				input[type="text"]{
+					width : 479px;
+				}
+			}
+			.bar-code-format {
+				float : right;
+			}
+		}
+	}
+
+	//포토 , Photo
+	.photo-content {
+		.text-box {
+			margin-bottom : 18px;
+		}
+		.list-image-box {
+			.list-image {
+				@include list-popup-creative-image(normal);
+			}
+			.popup-content-heading {
+				margin-bottom : 5px;
+			}
+		}
+	}
+
+	//비디오 , Video
+	.video-content {
+
+		.row {
+			@include clfix;
+		}
+
+		.list-image-box {
+			margin-top : 23px;
+			.popup-content-heading {
+				margin-bottom : 5px;
+				.file-upload {
+					.btn-file-ok {
+						@include button-style(55,23,12);
+					}
+				}
+			}
+			.list-image {
+				@include list-popup-creative-image(normal);
+				.text-image-size {
+					width : 85px;
+					@include ellipsis;
+				}
+			}
+		}
+
+		.list-video-thumbnails-box {
+			margin-top : 17px;
+			.popup-content-heading {
+				margin-bottom : 7px;
+			}
+
+			.list-video-thumbnails {
+				@include clfix;
+				margin-left : -9px;
+				li {
+					background-color : #f1f1f1;
+					border : 1px solid #d0d0d0;
+					box-sizing : border-box;
+					float : left;
+					height : 56px;
+					position : relative;
+					width : 80px;
+					margin-left : 9px;
+					cursor : pointer;
+					img {
+						max-width : 78px;
+						max-height : 54px;
+						@include center-position;
+					}
+					&.active {
+						outline : 3px solid #3b5998;
+					}
+					&:last-child {
+						border : 3px solid #e4e4e4;
+						background : url(../../images_v1/bg/bg-add.png) no-repeat 50% 50% #fff;
+						cursor : pointer;
+						position : relative;
+						&.active {
+							&:hover {
+								&:after {
+									opacity : 1;
+								}
+							}
+							&:after {
+								content : '';
+								width  :16px;
+								height : 16px;
+								background-image : url(../../images_v1/bg/bg-add.png);
+								@include center-position;
+								opacity : 0.7;
+							}
+						}
+						&:before {
+							position : absolute;
+							content : 'Custom';
+							display : block;
+							font-size : 13px;
+							color : #3b5998;
+							line-height : 24px;
+							top : -32px;
+							left : 0;
+						}
+
+					}
+				}
+			}
+		}
+
+
+		.call-to-action-box ,
+		.link-url-box ,
+		.display-link-box {
+			width : 33.3%;
+			margin-top : 18px;
+		}
+
+		.call-to-action-box {
+			float : left;
+			.popup-content-heading {
+				display : inline-block;
+				vertical-align: middle;
+			}
+			select {
+				width : 200px;
+			}
+		}
+
+		.link-url-box ,
+		.display-link-box {
+			p {
+				display : inline-block;
+				vertical-align: middle;
+				font-size : 13px;
+			}
+			input[type="text"]{
+				width : 254px;
+				padding : 3px 7px;
+				margin-left : 5px;
+			}
+		}
+
+		.link-url-box {
+			float : left;
+			text-align : center;
+		}
+		.display-link-box {
+			float : right;
+			text-align : right;
+		}
+
+	}
+
+	//웹사이트 클릭 , Website Click
+	.website-click-content {
+
+		.row {
+			@include clfix;
+		}
+
+		.list-image-box {
+			margin-top : 23px;
+			.popup-content-heading {
+				margin-bottom : 5px;
+			}
+			.list-image {
+				@include list-popup-creative-image(normal);
+			}
+		}
+
+		.link-url-box ,
+		.link-title-box ,
+		.description-box ,
+		.caption-box {
+			input[type="text"]{
+				padding : 3px 7px;
+				margin-right : 10px;
+			}
+
+			.popup-content-heading {
+				display : inline-block;
+				vertical-align : middle;
+				width : 94px;
+			}
+			p {
+				display : inline-block;
+				vertical-align : middle;
+			}
+		}
+
+		.link-url-box ,
+		.link-title-box,
+		.description-box {
+			margin-bottom : 5px;
+		}
+
+		.link-url-box ,
+		.link-title-box {
+			input[type="text"]{
+				width : 384px;
+			}
+		}
+		.description-box ,
+		.caption-box {
+			input[type="text"]{
+				width : 736px;
+			}
+		}
+
+		.link-url-box {
+			margin-top : 16px;
+		}
+
+		.call-to-action-box {
+			margin-top : 23px;
+			.popup-content-heading {
+				display : inline-block;
+				vertical-align: middle;
+			}
+			select {
+				width : 200px;
+			}
+		}
+	}
+
+	// 앱 인스톨 , App Install
+	.app-install-content {
+
+		input[type="text"]{
+			padding : 3px 7px;
+		}
+
+
+		.call-to-action-box ,
+		.link-title-box,
+		.app-store-box {
+			.popup-content-heading {
+				width : 90px;
+				display : inline-block;
+				vertical-align : middle;
+			}
+		}
+
+		.link-title-box {
+			margin-top : 16px;
+			> p {
+				display : inline-block;
+				vertical-align : middle;
+			}
+			input[type="text"]{
+				width : 384px;
+			}
+		}
+
+		.call-to-action-box {
+			margin-top : 10px;
+			select {
+				width : 200px;
+				height : 25px;
+			}
+		}
+
+
+
+
+		.photo {
+			.list-image-box {
+				.popup-content-heading {
+					margin-bottom : 5px;
+				}
+				.list-image {
+					@include list-popup-creative-image();
+				}
+			}
+		}
+
+		.video {
+			.list-image-box {
+				margin-top : 23px;
+				.popup-content-heading {
+					margin-bottom : 5px;
+					.file-upload {
+						.btn-file-ok {
+							@include button-style(55,23,12);
+						}
+					}
+				}
+				.list-image {
+					@include list-popup-creative-image(normal);
+					.text-image-size {
+						width : 85px;
+						@include ellipsis;
+					}
+				}
+			}
+			.list-video-thumbnails-box {
+				margin-top : 17px;
+				.popup-content-heading {
+					margin-bottom : 7px;
+				}
+
+				.list-video-thumbnails {
+					@include clfix;
+					margin-left : -9px;
+					li {
+						background-color : #f1f1f1;
+						border : 1px solid #d0d0d0;
+						box-sizing : border-box;
+						float : left;
+						height : 56px;
+						position : relative;
+						width : 80px;
+						margin-left : 9px;
+						cursor : pointer;
+						img {
+							max-width : 78px;
+							max-height : 54px;
+							@include center-position;
+						}
+						&.active {
+							outline : 3px solid #3b5998;
+						}
+						&:last-child {
+							border : 3px solid #e4e4e4;
+							background : url(../../images_v1/bg/bg-add.png) no-repeat 50% 50% #fff;
+							cursor : pointer;
+							position : relative;
+							&.active {
+								&:hover {
+									&:after {
+										opacity : 1;
+									}
+								}
+								&:after {
+									content : '';
+									width  :16px;
+									height : 16px;
+									background-image : url(../../images_v1/bg/bg-add.png);
+									@include center-position;
+									opacity : 0.7;
+								}
+							}
+							&:before {
+								position : absolute;
+								content : 'Custom';
+								display : block;
+								font-size : 13px;
+								color : #3b5998;
+								line-height : 24px;
+								top : -32px;
+								left : 0;
+							}
+
+						}
+					}
+				}
+			}
+			.app-store-box {
+				margin-top : 15px;
+				label {
+					@include button-type-radio();
+				}
+			}
+		}
+	}
+
+	// 플레이스먼트 , Placement
+	.list-placement-box {
+		margin-top : 10px;
+		.popup-content-heading {
+			display : inline-block;
+			vertical-align : middle;
+			width : 90px;
+		}
+		.list-placement {
+			@include clfix;
+			margin-left: -23px;
+			display : inline-block;
+			vertical-align : middle;
+
+			>li {
+				float: left;
+				margin-left: 23px;
+				position: relative;
+				.mobile ,
+				.desktop ,
+				.desktop-right {
+					> a {
+						display: block;
+						box-sizing: border-box;
+						border: 1px solid #aeaeae;
+						width: 292px;
+						height: 32px;
+						line-height: 32px;
+						font-size: 12px;
+						text-align: center;
+						border-radius: 20px;
+						color: #404040;
+						position : relative;
+						span {
+							&:after {
+								content: '';
+								display: inline-block;
+								height: 16px;
+								margin-left: 7px;
+								background-image: url(../../images_v1/icon/icon-placement-preview.png);
+								position : relative;
+								top : 2px;
+							}
+						}
+					}
+				}
+				.mobile {
+					position : relative;
+
+					// 마우스를 올려놓지 않았을때
+					> a {
+						span {
+							&:after {
+								width: 11px;
+								background-position: 0 -64px;
+							}
+						}
+					}
+					.sub-child {
+						display : none;
+						background-color: #fff;
+						position: absolute;
+						border: 1px solid #b8b8b8;
+						box-sizing: border-box;
+						width: 100%;
+						padding: 21px 21px 21px 19px;
+						border-radius: 5px;
+						top : 40px;
+						z-index : 5;
+						&:after {
+							content : '';
+							display : block;
+							background : url(../../images_v1/bg/arrow-top.png) no-repeat right 0 top 0;
+							width : 100%;
+							height : 10px;
+							position : absolute;
+							top : -10px;
+							right : 20px;
+
+						}
+						select {
+							height : 25px;
+						}
+						.select-device ,
+						.list-detail-device ,
+						.select-version {
+							margin-bottom : 7px;
+						}
+						.list-detail-device {
+							border : 1px solid #dadada;
+							li {
+								line-height : 24px;
+								position : relative;
+								padding : 0 7px;
+								border-top : 1px solid #dadada;
+								.btn-remove {
+									width : 8px;
+									height : 8px;
+									overflow : hidden;
+									background-image : url(../../images_v1/button/btn-placement-remove.png);
+									text-indent : -9999px;
+									position : absolute;
+									right : 10px;
+									top : 0;
+									bottom : 0;
+									margin : auto 0;
+								}
+								&:first-child {
+									border-top : 0 none;
+								}
+								input {
+									width : 100%;
+									border : 0 none;
+								}
+							}
+						}
+
+						.btn-edit {
+							@include button-style(55,20,12,#404040);
+							position : absolute;
+							right : 21px;
+							bottom : 23px;
+						}
+
+					}
+					&:after {
+						content : '';
+						display : block;
+						position : absolute;
+						width : 9px;
+						height : 7px;
+						background-image : url(../../images_v1/icon/icon-arrow-bot.png);
+						right : 12px;
+						top : 0;
+						bottom : 0;
+						margin : auto 0;
+					}
+
+					// 마우스를 올려놓았을때
+					&:hover,
+					&.active{
+						> a {
+							background-color : #404040;
+							color : #fff;
+							span {
+								&:after {
+									background-position : 0 -80px;
+								}
+							}
+						}
+						&:after {
+							background-image : url(../../images_v1/icon/icon-arrow-top.png);
+						}
+					}
+					&:hover {
+						.sub-child {
+							display : block;
+						}
+					}
+				}
+				.desktop {
+					> a {
+						span {
+							&:after {
+								width: 16px;
+								background-position: 0 0px;
+							}
+						}
+
+					}
+					&:hover ,
+					&.active {
+						> a {
+							background-color : #404040;
+							color : #fff;
+
+							span {
+								&:after {
+									background-position : 0 -16px;
+								}
+							}
+						}
+					}
+				}
+				.desktop-right {
+					> a {
+						span {
+							&:after {
+								width: 16px;
+								background-position: 0 -32px;
+							}
+						}
+
+					}
+					&:hover ,
+					&.active {
+						> a {
+							background-color : #404040;
+							color : #fff;
+							span {
+								&:after {
+									background-position : 0 -48px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.chk-merge-all {
+			clear: both;
+			margin-top : 10px;
+		}
+	}
+
+	.popup-container {
+		padding: 20px;
+		.popup-content-heading {
+			position: relative;
+			line-height : 23px;
+			p {
+				font : {
+					size : 11px;
+					weight : 300;
+				}
+				strong {
+					font : {
+						size : 14px;
+						weight : 400;
+					}
+					color: #3b5998;
+					margin-right : 5px;
+				}
+			}
+
+			.file-upload {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				.btn-file-upload {
+					width: 115px;
+					height: 23px;
+					background : url(../../images_v1/button/btn-file-upload.png) no-repeat 50% 50% #404040;
+					border-radius : 12px;
+					text-indent: -9999px;
+					overflow: hidden;
+				}
+				.input-file {
+					opacity: 0;
+					position: absolute;
+					left: -9999px;
+				}
+			}
+		}
+	}
+
+	.alert-only6 {
+		color: #fff;
+		background-color: #e86767;
+		position: absolute;
+		padding: 9px 12px;
+		letter-spacing: 0;
+		border-radius: 5px;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 6px;
+			border: {
+				left: 8px solid transparent;
+				right: 8px solid transparent;
+				top: 5px solid #e86767;
+			}
+		}
+	}
+	.btn-ok {
+		@include button-style();
+	}
+	.btn-cancel {
+		@include button-style(130, 32, 18, #ababab);
+	}
+}
+
+.popup-create-target-audience {
+	@include popup-default-style;
+	@include center-position;
+	position : absolute;
+	.popup-container {
+		@include clfix;
+		padding: 24px 20px;
+		.col-left {
+			float: left;
+			.table-popup-target-audience {
+				th {
+					font-size: 15px;
+					vertical-align: top;
+					color: #3b5998;
+					text-align: left;
+					width: 110px;
+					line-height: 13px;
+				}
+				td {
+					font-size: 13px;
+					width: 335px;
+					vertical-align: top;
+					padding-bottom: 6px;
+
+					//임시
+					input[type="text"] {
+						padding: 3px 7px;
+					}
+					select {
+						height: 25px;
+					}
+					// 임시 끝
+
+				}
+				.exclude-custom-audience {
+					th, td {
+						padding-bottom: 20px;
+						border-bottom: 1px solid #d6d6d6;
+					}
+				}
+				.location {
+					th, td {
+						padding-top: 20px;
+					}
+				}
+			}
+		}
+		.col-right {
+			float: right;
+			.text-audience-definition {
+				font-size: 15px;
+				font-weight: bold;
+				line-height: 39px;
+				border-bottom: 1px solid #d4d4d4;
+				color: #3b5998;
+				background-color: #f2f2f2;
+				padding: 0 13px;
+
+			}
+			.box-potential-reach {
+				.text-potential-reach {
+					font-size: 14px;
+					font-weight: bold;
+					color: #3b5998;
+				}
+				.text-people {
+					font-size: 12px;
+					span {
+						font-size: 20px;
+						font-weight: bold;
+
+					}
+				}
+				.text-audience-detail {
+					font-size: 14px;
+				}
+				.list-audience-detail {
+					font-size: 12px;
+					list-style: disc;
+				}
+			}
+		}
+	}
+	.btn-ok {
+		@include button-style();
+	}
+	.btn-cancel {
+		@include button-style(130, 32, 18, #ababab);
+		margin-left: 5px;
+	}
+}
+
+.popup-create-pixel {
+	@include popup-default-style();
+	@include center-position;
+	position : absolute;
+	width : 600px;
+	.popup-container {
+		border-bottom : 0 none;
+		padding : 20px 18px 12px;
+
+		.table-create-pixel {
+			table {
+				width : 100%;
+			}
+			th , td {
+
+			}
+			th {
+				color : #3b5998;
+				font-size : 15px;
+				font-weight : 400;
+				text-align : left;
+				width : 67px;
+				vertical-align : top;
+			}
+			td {
+
+			}
+			.name ,
+			.category {
+				th {
+					padding-top : 3px;
+				}
+			}
+			.name {
+				input[type="text"]{
+					padding : 3px 7px;
+					width : 420px;
+				}
+				td {
+					padding-bottom : 6px;
+				}
+			}
+			.category {
+				select {
+					width : 344px;
+					height : 25px;
+				}
+				.btn-create {
+					@include button-style(66,21,12,#404040);
+					margin-left : 5px;
+				}
+				th ,
+				td {
+					border-bottom : 1px solid #dadada;
+				}
+				td {
+					padding-bottom : 17px;
+				}
+			}
+			.code {
+				textarea {
+					width : 419px;
+					height : 185px;
+					resize : none;
+					padding : 3px 7px;
+					box-sizing : border-box;
+					font-family : $base-font;
+				}
+				th {
+					padding-top : 16px;
+				}
+				td {
+					padding-top : 13px;
+				}
+			}
+		}
+	}
+}
+
+.popup-confirm-creative {
+	@include popup-default-style();
+	@include center-position;
+	position : absolute;
+	.btn-content {
+		text-align : center;
+		padding : 52px 0 61px;
+		.btn-create-new,
+		.btn-choose-existing{
+			@include button-style(269,40,15,#fff,#404040);
+			border : 1px solid #c6c6c6;
+			&:hover {
+				background-color : #404040;
+				color : #fff;
+				border : 1px solid #404040;
+			}
+		}
+		.btn-choose-existing {
+			margin-left : 15px;
+		}
+
+	}
+	.popup-existing-content {
+		padding : 61px 21px;
+		label {
+			font-size : 17px;
+			color : #3b5998;
+			vertical-align : middle;
+			width : 73px;
+			display : inline-block;
+		}
+		select {
+			width : 553px;
+			height : 26px;
+		}
+		input[type="text"]{
+			width : 325px;
+			padding : 3px 7px;
+			margin-left : 7px;
+		}
+	}
+	.btn-popup-back {
+		@include button-style(100,25,15,#a1a1a1);
+	}
+	.btn-popup-ok {
+		@include button-style(100,25,15);
+	}
+}
+
+.popup-terms-policies {
+	@include popup-default-style;
+	@include center-position;
+	position : absolute;
+	.popup-container {
+		letter-spacing : 0;
+		padding : 25px 22px;
+
+		> p {
+			font-size : 15px;
+			color : #404040;
+		}
+		.terms-policies-content {
+			border : 1px solid #bcbcbc;
+			box-sizing : border-box;
+			width : 735px;
+			height : 311px;
+			padding : 36px 24px;
+			margin : 15px auto;
+
+			p {
+				&:first-child {
+					margin-top : 0;
+				}
+			}
+			.title {
+				font-size : 15px;
+				color : #3b5998;
+				margin-top : 22px;
+				margin-bottom : 10px;
+			}
+			.desc {
+				line-height : 15px;
+				font-size : 13px;
+			}
+		}
+		.link-terms-policies {
+			a {
+				color :#003cff;
+				text-decoration : underline;
+			}
+		}
+	}
+	.btn-popup-back {
+		@include button-style(100,25,15,#ababab);
+	}
+	.btn-popup-reserve {
+		@include button-style(100,25,15);
+	}
+
+	.loading-reserving {
+		text-align : center;
+		position: absolute;
+		background-color : rgba(255,255,255,0.7);
+		width : 100%;
+		height : 507px;
+		top : 65px;
+		left : 0;
+		.loading-content {
+			@include center-position;
+			p {
+				font-size : 16px;
+				margin-top : 10px;
+			}
+		}
+	}
+}
