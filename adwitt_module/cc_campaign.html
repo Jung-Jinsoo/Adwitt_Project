@@ -689,18 +689,105 @@
             </div>
             <div class="content creative-content">
                 <h4>Creative</h4>
-                <div class="list-creative">
+                <div class="list-creative multi-preview" style="display : block;">
                     <ul>
                         <li class="has-data">
                             <div class="btn-group">
-                                <a href="#"><img src="../images_v1/button/btn-modify.png" alt="수정"/></a>
-                                <a href="#"><img src="../images_v1/button/btn-delete.png" alt="삭제"/></a>
+                                <div class="col-left">
+                                    <button type="button" class="btn-placement-desktop active">Placement - Desktop</button>
+                                    <button type="button" class="btn-placement-right">Placement - Right Column</button>
+                                    <button type="button" class="btn-placement-mobile">Placement - Mobile</button>
+                                </div>
+                                <div class="col-right">
+                                    <a href="#"><img src="../images_v1/button/btn-modify.png" alt="수정"/></a>
+                                    <a href="#"><img src="../images_v1/button/btn-delete.png" alt="삭제"/></a>
+                                </div>
                             </div>
                             <div class="image">
-                                <img src="http://placekitten.com/g/200/300" alt=""/>
+                                <div>
+                                    <img src="http://placekitten.com/g/200/300" alt=""/>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="has-data">
+                            <div class="btn-group">
+                                <div class="col-left">
+                                    <button type="button" class="btn-placement-desktop active">Placement - Desktop</button>
+                                    <button type="button" class="btn-placement-right">Placement - Right Column</button>
+                                    <button type="button" class="btn-placement-mobile">Placement - Mobile</button>
+                                </div>
+                                <div class="col-right">
+                                    <a href="#"><img src="../images_v1/button/btn-modify.png" alt="수정"/></a>
+                                    <a href="#"><img src="../images_v1/button/btn-delete.png" alt="삭제"/></a>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <div>
+                                    <img src="http://placekitten.com/g/200/300" alt=""/>
+                                </div>
+                                <div>
+                                    <img src="http://placekitten.com/g/200/300" alt=""/>
+                                </div>
+                                <div>
+                                    <img src="http://placekitten.com/g/200/300" alt=""/>
+                                </div>
                             </div>
                         </li>
                         <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="list-creative" style="display : none;">
+                    <ul>
+                        <li class="has-data">
+                            <div class="btn-group">
+                                <div class="col-left">
+                                    <button type="button" class="btn-placement-desktop active">Placement - Desktop</button>
+                                    <button type="button" class="btn-placement-right">Placement - Right Column</button>
+                                    <button type="button" class="btn-placement-mobile">Placement - Mobile</button>
+                                </div>
+                                <div class="col-right">
+                                    <a href="#"><img src="../images_v1/button/btn-modify.png" alt="수정"/></a>
+                                    <a href="#"><img src="../images_v1/button/btn-delete.png" alt="삭제"/></a>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <div>
+                                    <img src="http://placekitten.com/g/200/300" alt=""/>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="has-data">
+                            <div class="btn-group">
+                                <div class="col-left">
+                                    <button type="button" class="btn-placement-desktop active">Placement - Desktop</button>
+                                    <button type="button" class="btn-placement-right">Placement - Right Column</button>
+                                    <button type="button" class="btn-placement-mobile">Placement - Mobile</button>
+                                </div>
+                                <div class="col-right">
+                                    <a href="#"><img src="../images_v1/button/btn-modify.png" alt="수정"/></a>
+                                    <a href="#"><img src="../images_v1/button/btn-delete.png" alt="삭제"/></a>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <div>
+                                    <img src="http://placekitten.com/g/200/300" alt=""/>
+                                </div>
+                            </div>
+                        </li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -729,8 +816,41 @@
                 </div>
             </div>
             <div class="content placement-preview-content">
-                <h4>Placement<br/>&amp; Preview</h4>
-                <ul class="list-placement-preview">
+                <h4>Preview</h4>
+                <div>
+                    <div class="desktop-feed">
+                        <ul class="tab-menu">
+                            <li class="active">
+                                <a href="#">Desktop News Feed</a>
+                            </li>
+                            <li>
+                                <a href="#">Desktop Right Column</a>
+                            </li>
+                        </ul>
+
+                        <div class="preview">
+                            <div class="preview-desktop-news-feed"></div>
+                            <div class="preview-desktop-right-column" style="display : none;"></div>
+                        </div>
+
+                    </div>
+                    <div class="mobile-feed">
+
+                        <ul class="tab-menu">
+                            <li>
+                                <a href="#">Mobile News Feed</a>
+                            </li>
+                            <li>
+                                <a href="#">Partner Mobile App</a>
+                            </li>
+                        </ul>
+                        <div class="preview">
+                            <div class="preview-mobile-news-feed"></div>
+                            <div class="preview-partner-mobile-app" style="display : none;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--<ul class="list-placement-preview">
                     <li>
                         <div class="mobile">
                             <a href="#">
@@ -792,7 +912,7 @@
                         </div>
                         <div class="preview"></div>
                     </li>
-                </ul>
+                </ul>-->
                 <p class="chk-merge-all">
                     <input type="checkbox" name="" id=""/>
                     <label for="">Merge all placements for each creative</label>
@@ -1294,7 +1414,7 @@
                         Campaign Summary
                     </h4>
                     <!-- 이걸 클릭을 하면-->
-                    <a href="#"><img src="../images_v1/button/btn-modify-blue-large.png" alt="수정"/></a>
+                    <a href="#"><img src="../images_v1/button/btn-modify-blue-xlarge.png" alt="수정"/></a>
                     <div class="btn-group">
                         <button type="button" class="btn-ok">OK</button>
                         <button type="button" class="btn-cancel">Cancel</button>
@@ -1309,7 +1429,7 @@
                                     <input type="text" name="" id="" value="141030_Post Engagement"/>
                                 </div>
                                 <div class="modify-hide">
-                                    <p>141030_Post Engagement</p>
+                                    <p><strong>141030_Post Engagement</strong></p>
                                 </div>
                             </td>
                             <td rowspan="3" class="auto-optimization-status">
@@ -1832,7 +1952,7 @@
                             <div>
                                 <div class="btn-group">
                                     <a href="#">
-                                        <img src="../images_v1/button/btn-delete.png" alt="삭제"/>
+                                        <img src="../images_v1/button/btn-delete-gray.png" alt="삭제"/>
                                     </a>
                                 </div>
                                 <p class="campaign-name">
@@ -1962,7 +2082,7 @@
                             <div>
                                 <div class="btn-group">
                                     <a href="#">
-                                        <img src="../images_v1/button/btn-delete.png" alt="삭제"/>
+                                        <img src="../images_v1/button/btn-delete-gray.png" alt="삭제"/>
                                     </a>
                                 </div>
                                 <p class="campaign-name">
@@ -2031,7 +2151,7 @@
                 </ul>
 
                 <!-- 광고타입이 Multi-Product 일 경우 -->
-                <div class="content multi-product-content" style="display : none;">
+                <div class="content multi-product-content" style="display : block;">
                     <div class="text-box">
                         <div class="popup-content-heading">
                             <p>
@@ -2216,7 +2336,6 @@
                                     <td>
                                         <p>
                                             <strong>Description</strong>
-                                            Characters remaining : <span>35</span>
                                         </p>
                                     </td>
                                 </tr>
@@ -2224,7 +2343,6 @@
                                     <td>
                                         <p>
                                             <strong>Caption</strong>
-                                            Characters remaining : <span>30</span>
                                         </p>
                                     </td>
                                 </tr>
@@ -2257,23 +2375,29 @@
                                 <tr class="description">
                                     <td>
                                         <input type="text" name="" id=""/>
+                                        <span class="text-remaining">35</span>
                                     </td>
                                     <td>
                                         <input type="text" name="" id=""/>
+                                        <span class="text-remaining">35</span>
                                     </td>
                                     <td>
                                         <input type="text" name="" id=""/>
+                                        <span class="text-remaining">35</span>
                                     </td>
                                 </tr>
                                 <tr class="caption">
                                     <td>
                                         <input type="text" name="" id=""/>
+                                        <span class="text-remaining">35</span>
                                     </td>
                                     <td>
                                         <input type="text" name="" id=""/>
+                                        <span class="text-remaining">35</span>
                                     </td>
                                     <td>
                                         <input type="text" name="" id=""/>
+                                        <span class="text-remaining">35</span>
                                     </td>
                                 </tr>
                             </table>
@@ -3118,7 +3242,7 @@
                 <!-- //Status -->
 
                 <!-- 광고타입이 App install 일 경우 -->
-                <div class="content app-install-content" style="display : block;">
+                <div class="content app-install-content" style="display : none;">
 
                     <div class="photo" style="display : none;">
 
@@ -3588,10 +3712,78 @@
                             </div>
                         </li>
                     </ul>
-                    <p class="chk-merge-all">
-                        <input type="checkbox" name="" id=""/>
-                        <label for="">Merge all placements for each creative</label>
-                    </p>
+                </div>
+                <div class="list-placement-box">
+                    <div class="popup-content-heading">
+                        <p>
+                            <strong>Placement</strong>
+                        </p>
+                    </div>
+                    <ul class="list-placement has-partner-app">
+                        <li>
+                            <div class="mobile">
+                                <a href="#">
+                                    <span>Mobile News Feed</span>
+                                </a>
+                                <div class="sub-child">
+                                    <div class="select-device">
+                                        <select name="" id="">
+                                            <option value="">All Mobile Devices</option>
+                                            <option value="">Android Devices Only</option>
+                                            <option value="">iOS Devices Only</option>
+                                            <option value="">Feature Phones Only</option>
+                                        </select>
+                                    </div>
+                                    <div class="list-detail-device">
+                                        <ul>
+                                            <li>
+                                                Android Smartphones(all)
+                                                <button type="button" class="btn-remove">Remove</button>
+                                            </li>
+                                            <li>
+                                                Android Tablets(all)
+                                                <button type="button" class="btn-remove">Remove</button>
+                                            </li>
+                                            <li>
+                                                <input type="text" name="" id="" placeholder="Enter a Device Name...(eg. Samsung Galaxy S4)"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-version">
+                                        <select name="" id="">
+                                            <option value="">All Versions</option>
+                                        </select>
+                                    </div>
+                                    <p>
+                                        <input type="checkbox" name="" id=""/>
+                                        <label for="">Only when connected to Wi-Fi</label>
+                                    </p>
+                                    <button type="button" class="btn-edit">Edit</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="desktop">
+                                <a href="#">
+                                    <span>Desktop News Feed</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="desktop-right">
+                                <a href="#">
+                                    <span>Desktop Right Column</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="partner-mobile-app">
+                                <a href="#">
+                                    <span>Partner Mobile App</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <!-- //Placement -->
             </div>
@@ -3721,6 +3913,413 @@
         <div class="popup-dim-overlay"></div>
     </div>
 
+
+    <div style="display : none;">
+        <div class="popup-edit-campaign">
+            <div class="popup-header">
+                <h5>
+                    Edit Campaign
+                </h5>
+            </div>
+
+            <div class="popup-container">
+                <ul class="tab-menu">
+                    <li class="active">
+                        <a href="#">Schedule</a>
+                    </li>
+                    <li>
+                        <a href="#">Budget</a>
+                    </li>
+                </ul>
+
+                <div>
+                    <div class="schedule" style="display : none;">
+
+                        <div class="table-popup-edit-campaign-schedule">
+                            <table>
+                                <tr class="campaign">
+                                    <th>Campaign</th>
+                                    <td><input type="text" name="" id=""/></td>
+                                </tr>
+                                <tr class="date-start">
+                                    <th>Date Start</th>
+                                    <td>
+                                        <p class="start-time">
+                                            <input type="text" class="input-date" name="" id=""/>
+                                            <input type="text" class="input-hour" name="" id=""/>
+                                            <input type="text" class="input-min" name="" id=""/>
+                                        </p>
+                                        <p class="end-time">
+                                            <input type="text" class="input-date" name="" id=""/>
+                                            <input type="text" class="input-hour" name="" id=""/>
+                                            <input type="text" class="input-min" name="" id=""/>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" name="" id=""/>
+                                                Run my campaign continuously from the date start
+                                            </label>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="exposure-time-set">
+                                    <th>Exposure Time-Set</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value=""></option>
+                                        </select>
+                                        <div class="time-wrap" style="display: block;">
+                                            <div class="time-wrap-heading">
+                                                <p class="text-desc">
+                                                    Scheduled hours are shaded blue
+                                                </p>
+                                            </div>
+                                            <div class="time-zone first">
+                                                <div class="day first">
+                                                    <div class="label">
+                                                        <i>
+                                                            Mon
+                                                        </i>
+                                                    </div>
+                                                    <div class="times day1">
+                                                        <span class="hour time0 first"></span>
+                                                        <span class="hour time1"></span>
+                                                        <span class="hour time2 nth-child-3"></span>
+
+                                                        <span class="hour time3"></span>
+                                                        <span class="hour time4"></span>
+                                                        <span class="hour time5 nth-child-3"></span>
+
+                                                        <span class="hour time6"></span>
+                                                        <span class="hour time7"></span>
+                                                        <span class="hour time8 nth-child-3"></span>
+
+                                                        <span class="hour time9"></span>
+                                                        <span class="hour time10"></span>
+                                                        <span class="hour time11 nth-child-3"></span>
+
+                                                        <span class="hour time12"></span>
+                                                        <span class="hour time13"></span>
+                                                        <span class="hour time14 nth-child-3"></span>
+
+                                                        <span class="hour time15"></span>
+                                                        <span class="hour time16"></span>
+                                                        <span class="hour time17 nth-child-3"></span>
+
+                                                        <span class="hour time18"></span>
+                                                        <span class="hour time19"></span>
+                                                        <span class="hour time20 nth-child-3"></span>
+
+                                                        <span class="hour time21"></span>
+                                                        <span class="hour time22"></span>
+                                                        <span class="hour time23 nth-child-3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="day">
+                                                    <div class="label">
+                                                        <i>
+                                                            Tue
+                                                        </i>
+                                                    </div>
+                                                    <div class="times day2">
+                                                        <span class="hour time0 first"></span>
+                                                        <span class="hour time1"></span>
+                                                        <span class="hour time2 nth-child-3"></span>
+
+                                                        <span class="hour time3"></span>
+                                                        <span class="hour time4"></span>
+                                                        <span class="hour time5 nth-child-3"></span>
+
+                                                        <span class="hour time6"></span>
+                                                        <span class="hour time7"></span>
+                                                        <span class="hour time8 nth-child-3"></span>
+
+                                                        <span class="hour time9"></span>
+                                                        <span class="hour time10"></span>
+                                                        <span class="hour time11 nth-child-3"></span>
+
+                                                        <span class="hour time12"></span>
+                                                        <span class="hour time13"></span>
+                                                        <span class="hour time14 nth-child-3"></span>
+
+                                                        <span class="hour time15"></span>
+                                                        <span class="hour time16"></span>
+                                                        <span class="hour time17 nth-child-3"></span>
+
+                                                        <span class="hour time18"></span>
+                                                        <span class="hour time19"></span>
+                                                        <span class="hour time20 nth-child-3"></span>
+
+                                                        <span class="hour time21"></span>
+                                                        <span class="hour time22"></span>
+                                                        <span class="hour time23 nth-child-3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="day">
+                                                    <div class="label">
+                                                        <i>
+                                                            Wed
+                                                        </i>
+                                                    </div>
+                                                    <div class="times day3">
+                                                        <span class="hour time0 first"></span>
+                                                        <span class="hour time1"></span>
+                                                        <span class="hour time2 nth-child-3"></span>
+
+                                                        <span class="hour time3"></span>
+                                                        <span class="hour time4"></span>
+                                                        <span class="hour time5 nth-child-3"></span>
+
+                                                        <span class="hour time6"></span>
+                                                        <span class="hour time7"></span>
+                                                        <span class="hour time8 nth-child-3"></span>
+
+                                                        <span class="hour time9"></span>
+                                                        <span class="hour time10"></span>
+                                                        <span class="hour time11 nth-child-3"></span>
+
+                                                        <span class="hour time12"></span>
+                                                        <span class="hour time13"></span>
+                                                        <span class="hour time14 nth-child-3"></span>
+
+                                                        <span class="hour time15"></span>
+                                                        <span class="hour time16"></span>
+                                                        <span class="hour time17 nth-child-3"></span>
+
+                                                        <span class="hour time18"></span>
+                                                        <span class="hour time19"></span>
+                                                        <span class="hour time20 nth-child-3"></span>
+
+                                                        <span class="hour time21"></span>
+                                                        <span class="hour time22"></span>
+                                                        <span class="hour time23 nth-child-3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="day">
+                                                    <div class="label">
+                                                        <i>
+                                                            Thu
+                                                        </i>
+                                                    </div>
+                                                    <div class="times day4">
+                                                        <span class="hour time0 first"></span>
+                                                        <span class="hour time1"></span>
+                                                        <span class="hour time2 nth-child-3"></span>
+
+                                                        <span class="hour time3"></span>
+                                                        <span class="hour time4"></span>
+                                                        <span class="hour time5 nth-child-3"></span>
+
+                                                        <span class="hour time6"></span>
+                                                        <span class="hour time7"></span>
+                                                        <span class="hour time8 nth-child-3"></span>
+
+                                                        <span class="hour time9"></span>
+                                                        <span class="hour time10"></span>
+                                                        <span class="hour time11 nth-child-3"></span>
+
+                                                        <span class="hour time12"></span>
+                                                        <span class="hour time13"></span>
+                                                        <span class="hour time14 nth-child-3"></span>
+
+                                                        <span class="hour time15"></span>
+                                                        <span class="hour time16"></span>
+                                                        <span class="hour time17 nth-child-3"></span>
+
+                                                        <span class="hour time18"></span>
+                                                        <span class="hour time19"></span>
+                                                        <span class="hour time20 nth-child-3"></span>
+
+                                                        <span class="hour time21"></span>
+                                                        <span class="hour time22"></span>
+                                                        <span class="hour time23 nth-child-3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="day">
+                                                    <div class="label">
+                                                        <i>
+                                                            Fri
+                                                        </i>
+                                                    </div>
+                                                    <div class="times day5">
+                                                        <span class="hour time0 first"></span>
+                                                        <span class="hour time1"></span>
+                                                        <span class="hour time2 nth-child-3"></span>
+
+                                                        <span class="hour time3"></span>
+                                                        <span class="hour time4"></span>
+                                                        <span class="hour time5 nth-child-3"></span>
+
+                                                        <span class="hour time6"></span>
+                                                        <span class="hour time7"></span>
+                                                        <span class="hour time8 nth-child-3"></span>
+
+                                                        <span class="hour time9"></span>
+                                                        <span class="hour time10"></span>
+                                                        <span class="hour time11 nth-child-3"></span>
+
+                                                        <span class="hour time12"></span>
+                                                        <span class="hour time13"></span>
+                                                        <span class="hour time14 nth-child-3"></span>
+
+                                                        <span class="hour time15"></span>
+                                                        <span class="hour time16"></span>
+                                                        <span class="hour time17 nth-child-3"></span>
+
+                                                        <span class="hour time18"></span>
+                                                        <span class="hour time19"></span>
+                                                        <span class="hour time20 nth-child-3"></span>
+
+                                                        <span class="hour time21"></span>
+                                                        <span class="hour time22"></span>
+                                                        <span class="hour time23 nth-child-3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="day">
+                                                    <div class="label">
+                                                        <i>
+                                                            Sat
+                                                        </i>
+                                                    </div>
+                                                    <div class="times day6">
+                                                        <span class="hour time0 first"></span>
+                                                        <span class="hour time1"></span>
+                                                        <span class="hour time2 nth-child-3"></span>
+
+                                                        <span class="hour time3"></span>
+                                                        <span class="hour time4"></span>
+                                                        <span class="hour time5 nth-child-3"></span>
+
+                                                        <span class="hour time6"></span>
+                                                        <span class="hour time7"></span>
+                                                        <span class="hour time8 nth-child-3"></span>
+
+                                                        <span class="hour time9"></span>
+                                                        <span class="hour time10"></span>
+                                                        <span class="hour time11 nth-child-3"></span>
+
+                                                        <span class="hour time12"></span>
+                                                        <span class="hour time13"></span>
+                                                        <span class="hour time14 nth-child-3"></span>
+
+                                                        <span class="hour time15"></span>
+                                                        <span class="hour time16"></span>
+                                                        <span class="hour time17 nth-child-3"></span>
+
+                                                        <span class="hour time18"></span>
+                                                        <span class="hour time19"></span>
+                                                        <span class="hour time20 nth-child-3"></span>
+
+                                                        <span class="hour time21"></span>
+                                                        <span class="hour time22"></span>
+                                                        <span class="hour time23 nth-child-3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="day">
+                                                    <div class="label">
+                                                        <i>
+                                                            Sun
+                                                        </i>
+                                                    </div>
+                                                    <div class="times day0">
+                                                        <span class="hour time0 first"></span>
+                                                        <span class="hour time1"></span>
+                                                        <span class="hour time2 nth-child-3"></span>
+
+                                                        <span class="hour time3"></span>
+                                                        <span class="hour time4"></span>
+                                                        <span class="hour time5 nth-child-3"></span>
+
+                                                        <span class="hour time6"></span>
+                                                        <span class="hour time7"></span>
+                                                        <span class="hour time8 nth-child-3"></span>
+
+                                                        <span class="hour time9"></span>
+                                                        <span class="hour time10"></span>
+                                                        <span class="hour time11 nth-child-3"></span>
+
+                                                        <span class="hour time12"></span>
+                                                        <span class="hour time13"></span>
+                                                        <span class="hour time14 nth-child-3"></span>
+
+                                                        <span class="hour time15"></span>
+                                                        <span class="hour time16"></span>
+                                                        <span class="hour time17 nth-child-3"></span>
+
+                                                        <span class="hour time18"></span>
+                                                        <span class="hour time19"></span>
+                                                        <span class="hour time20 nth-child-3"></span>
+
+                                                        <span class="hour time21"></span>
+                                                        <span class="hour time22"></span>
+                                                        <span class="hour time23 nth-child-3"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-hours">
+                                                <span>12am</span>
+                                                <span>3am</span>
+                                                <span>6am</span>
+                                                <span>9am</span>
+                                                <span>12pm</span>
+                                                <span>3pm</span>
+                                                <span>6pm</span>
+                                                <span>9pm</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="status">
+                                    <th>Status</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">Active</option>
+                                            <option value="">Pause</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="budget">
+                        <div class="table-popup-edit-campaign-budget">
+                            <table>
+                                <tr>
+                                    <th>Budget</th>
+                                    <td>
+                                        <input type="text" name="" id=""/>
+                                        <label><input type="radio" name="" id=""/> Lifetime</label>
+                                        <label><input type="radio" name="" id=""/> Daily</label>
+                                        <p class="text">
+                                            Note: If you change your budget more than <span class="text-color-blue">3 times within 30 min,</span><br/>
+                                            your account will be blocked for <span class="text-color-dark-blue">2 hours</span> followed by Facebook policy.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="popup-footer">
+                <button class="btn-edit" type="button">Edit</button>
+                <button class="btn-cancel" type="button">Cancel</button>
+            </div>
+            <a href="#" class="btn-popup-close">Popup Close</a>
+        </div>
+    </div>
+
+
+    <div class="arrow-next" style="left : 100px;">
+        <p>NEXT버튼에 붙는거 : 스타일 속성은 임시로 넣었음. 꼭 지울것</p>
+    </div>
+    <div class="arrow-input">
+        <p>Input에 붙는거</p>
+    </div>
     <div id="jqueryTest">
         <button type="button" id="popup1" data-value="0">Creative Popup</button>
         <button type="button" id="popup2" data-value="0">Conversion Pixel Popup </button>

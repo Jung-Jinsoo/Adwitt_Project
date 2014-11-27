@@ -2577,29 +2577,6 @@ select, input {
   padding-left: 19px;
   font-weight: 300;
 }
-.table-manage-campaign-summary td.auto-optimization-status {
-  border-left: 1px solid #dadada;
-  width: 531px;
-}
-.table-manage-campaign-summary td.auto-optimization-status .title {
-  font-size: 13px;
-  font-weight: 700;
-  color: #3b5998;
-}
-.table-manage-campaign-summary td.auto-optimization-status .title .btn-view-detail {
-  background-color: #3b5998;
-  border-radius: 12.5px;
-  box-sizing: border-box;
-  color: #fff;
-  font-size: 13px;
-  height: 25px;
-  line-height: 25px;
-  overflow: hidden;
-  text-align: center;
-  width: 100px;
-  font-family: "Roboto Condensed", sans-serif;
-  margin-left: 10px;
-}
 .table-manage-campaign-summary th,
 .table-manage-campaign-summary td {
   vertical-align: top;
@@ -2627,6 +2604,37 @@ select, input {
 }
 .table-manage-campaign-summary .name td input[type="text"] {
   width: 335px;
+}
+.table-manage-campaign-summary .name td.auto-optimization-status {
+  border-left: 1px solid #dadada;
+  width: 531px;
+}
+.table-manage-campaign-summary .name td.auto-optimization-status .title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3b5998;
+}
+.table-manage-campaign-summary .name td.auto-optimization-status .title .btn-view-detail {
+  background-color: #3b5998;
+  border-radius: 12.5px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 13px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  text-align: center;
+  width: 100px;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-left: 10px;
+}
+.table-manage-campaign-summary .name td.auto-optimization-status .text {
+  margin-top: 14px;
+}
+.table-manage-campaign-summary .name td.auto-optimization-status .text p {
+  line-height: 22px;
+  font-size: 13px;
+  font-weight: 400;
 }
 .table-manage-campaign-summary .period .date {
   padding-bottom: 7px;
@@ -2720,29 +2728,75 @@ select, input {
 .table-manage-campaign-performance table tr.etc td {
   border-top: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf;
+  text-align: center;
+}
+.table-manage-campaign-performance table tr.etc td strong,
+.table-manage-campaign-performance table tr.etc td span,
+.table-manage-campaign-performance table tr.etc td input[type="radio"] {
+  vertical-align: middle;
 }
 .table-manage-campaign-performance table tr.etc td:first-child {
   border-left: 0 none;
 }
 .table-manage-campaign-performance table td {
   height: 48px;
-  text-align: center;
+  font-size: 13px;
 }
 .table-manage-campaign-performance table td:first-child {
   padding-left: 20px;
-  text-align: left;
 }
 .table-manage-campaign-performance table td strong {
   color: #3b5598;
   font-weight: 400;
+  font-size: 15px;
 }
 
 .table-manage .inner {
   box-sizing: border-box;
   position: relative;
 }
+.table-manage .user-closed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 236, 236, 0.4);
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.table-manage .user-closed > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.table-manage .user-closed > div p {
+  font-size: 11px;
+  font-weight: 700;
+  color: #3b5998;
+  margin-bottom: 5px;
+}
+.table-manage .user-closed > div .btn-restart {
+  background-color: #ababab;
+  border-radius: 10.5px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  overflow: hidden;
+  text-align: center;
+  width: 68px;
+  font-family: "Roboto Condensed", sans-serif;
+}
 .table-manage table {
   overflow: hidden;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 .table-manage td {
   padding-left: 10px;
@@ -2963,6 +3017,594 @@ select, input {
   position: absolute;
   right: 5px;
   top: 3px;
+}
+
+.campaign-table .btn-confirm-wrap {
+  margin-bottom: 15px;
+  position: relative;
+}
+.campaign-table .btn-confirm-wrap .btn-bid {
+  background-color: #404040;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  width: 64px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.campaign-table .btn-confirm-wrap .btn-bid.active {
+  background-color: #fff;
+  color: #404040;
+}
+.campaign-table .btn-confirm-wrap select {
+  width: 72px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.campaign-table .btn-confirm-wrap .btn-min,
+.campaign-table .btn-confirm-wrap .btn-avg,
+.campaign-table .btn-confirm-wrap .btn-max {
+  background-color: #404040;
+  border-radius: 8.5px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  height: 17px;
+  line-height: 17px;
+  overflow: hidden;
+  text-align: center;
+  width: 45px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.campaign-table .btn-confirm-wrap .input-bidding-amount {
+  width: 72px;
+  border: 1px solid #404040;
+  padding: 3px 7px;
+}
+.campaign-table .btn-confirm-wrap .btn-ok {
+  background-color: #3b5998;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  text-align: center;
+  width: 68px;
+  font-family: "Roboto Condensed", sans-serif;
+  position: absolute;
+  right: 0;
+  top: 1px;
+}
+.campaign-table .btn-confirm-wrap > div {
+  display: inline-block;
+}
+.campaign-table .btn-confirm-wrap > div > p {
+  display: inline-block;
+}
+
+.popup-dim-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-edit-campaign {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #cbcbcb;
+  z-index: 100;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 600px;
+}
+.popup-edit-campaign .popup-header {
+  background-color: #3b5998;
+  height: 45px;
+}
+.popup-edit-campaign .popup-header h5 {
+  font-size: 15px;
+  color: #fff;
+  text-indent: 20px;
+  line-height: 45px;
+}
+.popup-edit-campaign .popup-footer {
+  text-align: center;
+  padding-top: 35px;
+  border-top: 2px solid #3b5998;
+}
+.popup-edit-campaign .popup-footer button:nth-child(2) {
+  margin-left: 10px;
+}
+.popup-edit-campaign .btn-popup-close {
+  display: block;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-image: url(../../images_v1/button/btn-popup-close.png);
+  right: 38px;
+  top: 37px;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.popup-edit-campaign .popup-container {
+  padding: 24px 17px;
+}
+.popup-edit-campaign .popup-container input[type="text"] {
+  border: 1px solid #c6c6c6;
+  line-height: 23px;
+  padding: 0 7px;
+}
+.popup-edit-campaign .popup-container .tab-menu {
+  *zoom: 1;
+}
+.popup-edit-campaign .popup-container .tab-menu:before, .popup-edit-campaign .popup-container .tab-menu:after {
+  display: table;
+  content: '';
+}
+.popup-edit-campaign .popup-container .tab-menu:after {
+  clear: both;
+}
+.popup-edit-campaign .popup-container .tab-menu li {
+  float: left;
+  margin-left: 1px;
+}
+.popup-edit-campaign .popup-container .tab-menu li:first-child {
+  margin-left: 0;
+}
+.popup-edit-campaign .popup-container .tab-menu li a {
+  background-color: #e4e4e4;
+  border-radius: 4px 4px 0 0;
+  color: #3b5998;
+  display: block;
+  text-align: center;
+  line-height: 23px;
+  width: 69px;
+}
+.popup-edit-campaign .popup-container .tab-menu li.active a {
+  background-color: #3b5998;
+  color: #fff;
+}
+.popup-edit-campaign .popup-container .schedule,
+.popup-edit-campaign .popup-container .budget {
+  border-top: 1px solid #dadada;
+}
+.popup-edit-campaign .popup-container .schedule th,
+.popup-edit-campaign .popup-container .budget th {
+  color: #3b5998;
+  font-size: 15px;
+  vertical-align: top;
+  text-align: left;
+  font-weight: 400;
+  width: 78px;
+}
+.popup-edit-campaign .popup-container .schedule {
+  padding-top: 20px;
+  padding-right: 27px;
+  padding-left: 20px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule td {
+  padding-bottom: 7px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .campaign input[type="text"] {
+  border: 1px solid #c6c6c6;
+  font-size: 13px;
+  width: 401px;
+  padding: 0 7px;
+  line-height: 23px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .date-start .input-date {
+  background-image: url(../../images_v1/icon/icon-calendar.png);
+  background-position: right 5px top 50%;
+  background-repeat: no-repeat;
+  width: 200px;
+  padding-right: 22px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .date-start .input-hour,
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .date-start .input-min {
+  width: 33px;
+  text-align: center;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .date-start .start-time {
+  margin-bottom: 7px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .date-start .end-time {
+  margin-bottom: 12px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set select {
+  width: 200px;
+  height: 25px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap {
+  margin-top: 13px;
+  margin-bottom: 16px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-wrap-heading {
+  *zoom: 1;
+  margin-bottom: 13px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-wrap-heading:before, .popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-wrap-heading:after {
+  display: table;
+  content: '';
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-wrap-heading:after {
+  clear: both;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-wrap-heading .text-desc:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #3b5998;
+  margin-right: 5px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .text-hours {
+  margin-top: 5px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .text-hours span {
+  display: inline-block;
+  width: 45px;
+  font-size: 11px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .text-hours .allday {
+  margin-left: 5px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone {
+  margin-left: -30px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .label, .popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .everyday .label {
+  float: left;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .label i, .popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .everyday .label i {
+  font-size: 11px;
+  font-style: normal;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day {
+  *zoom: 1;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day:before, .popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day:after {
+  display: table;
+  content: '';
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day:after {
+  clear: both;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day.first .times .hour, .popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day.first .all-select-time {
+  border-top: 1px solid #bdbfc4;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .times {
+  float: left;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .times .hour {
+  width: 15px;
+  height: 30px;
+  background-color: #f1f2f6;
+  cursor: pointer;
+  float: left;
+  border-bottom: 1px solid #bdbfc4;
+  border-right: 1px solid #fff;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .times .hour.first {
+  border-left: 1px solid #bdbfc4;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .times .hour.ui-selected {
+  background: -webkit-gradient(linear, center top, center bottom, from(#6279ae), to(#5870a8));
+  background: -webkit-linear-gradient(top, #6279ae, #5870a8);
+  background-color: #5870a8;
+  border-right: 1px solid #6d84b4;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .times .hour.nth-child-3 {
+  border-right: 1px solid #bdbfc4;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .all-select-time {
+  border-bottom: 1px solid #bdbfc4;
+  border-left: 1px solid #bdbfc4;
+  border-right: 1px solid #bdbfc4;
+  cursor: pointer;
+  float: left;
+  width: 45px;
+  height: 30px;
+  margin-left: 4px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .day .all-select-time.ui-selected {
+  background: -webkit-gradient(linear, center top, center bottom, from(#6279ae), to(#5870a8));
+  background: -webkit-linear-gradient(top, #6279ae, #5870a8);
+  background-color: #5870a8;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .everyday {
+  margin-top: 5px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .everyday .label {
+  font-weight: 700;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .everyday .times .every-hour {
+  width: 15px;
+  height: 30px;
+  cursor: pointer;
+  float: left;
+  border-bottom: 1px solid #bdbfc4;
+  border-right: 1px solid #bdbfc4;
+  border-top: 1px solid #bdbfc4;
+  background-color: #fff;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .everyday .times .every-hour.first {
+  border-left: 1px solid #bdbfc4;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .time-zone .everyday .times .every-hour.ui-selected {
+  background: -webkit-gradient(linear, center top, center bottom, from(#6279ae), to(#5870a8));
+  background: -webkit-linear-gradient(top, #6279ae, #5870a8);
+  background-color: #5870a8;
+  border-right: 1px solid #6d84b4;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set .time-wrap .desc {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 300;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .exposure-time-set td {
+  padding-top: 7px;
+}
+.popup-edit-campaign .popup-container .schedule .table-popup-edit-campaign-schedule .status select {
+  width: 104px;
+  height: 25px;
+}
+.popup-edit-campaign .popup-container .budget {
+  padding-top: 92px;
+  padding-left: 19px;
+  padding-bottom: 87px;
+}
+.popup-edit-campaign .popup-container .budget .table-popup-edit-campaign-budget th {
+  color: #3b5998;
+}
+.popup-edit-campaign .popup-container .budget .table-popup-edit-campaign-budget input[type="text"] {
+  width: 200px;
+}
+.popup-edit-campaign .popup-container .budget .table-popup-edit-campaign-budget label {
+  display: inline-block;
+  line-height: 23px;
+  border: 1px solid #bcbcbc;
+  font-size: 13px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0 10px 0 6px;
+  vertical-align: middle;
+}
+.popup-edit-campaign .popup-container .budget .table-popup-edit-campaign-budget .text {
+  line-height: 17px;
+  margin-top: 15px;
+}
+.popup-edit-campaign .popup-container .budget .table-popup-edit-campaign-budget .text .text-color-blue {
+  color: #3b5998;
+}
+.popup-edit-campaign .popup-container .budget .table-popup-edit-campaign-budget .text .text-color-dark-blue {
+  color: #2c4372;
+}
+.popup-edit-campaign .popup-footer .btn-edit {
+  background-color: #3b5998;
+  border-radius: 12.5px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 15px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  text-align: center;
+  width: 100px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.popup-edit-campaign .popup-footer .btn-cancel {
+  background-color: #ababab;
+  border-radius: 12.5px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 15px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  text-align: center;
+  width: 100px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.popup-tooltip-type {
+  background-color: #f0f0f0;
+  border: 1px solid #3b5998;
+  box-sizing: border-box;
+  padding: 13px 15px 15px;
+  position: absolute;
+  width: 308px;
+  z-index: 10;
+  top: -1px;
+  right: -319px;
+}
+.popup-tooltip-type input[type="text"] {
+  padding: 3px 7px;
+}
+.popup-tooltip-type:before, .popup-tooltip-type:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+.popup-tooltip-type:before {
+  border-right: 8px solid #3b5998;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  left: -9px;
+}
+.popup-tooltip-type:after {
+  border-right: 7px solid #f0f0f0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  left: -7px;
+}
+.popup-tooltip-type .popup-tooltip-container {
+  padding: 0 10px;
+}
+.popup-tooltip-type .btn-align-center {
+  margin-top: 25px;
+  text-align: center;
+}
+.popup-tooltip-type .btn-align-center .btn-save {
+  background-color: #3b5998;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  width: 55px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.popup-tooltip-type .btn-align-center .btn-cancel {
+  background-color: #ababab;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  width: 55px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.popup-cpc-ocpm .tab-menu {
+  *zoom: 1;
+  border-bottom: 1px solid #d4d4d4;
+}
+.popup-cpc-ocpm .tab-menu:before, .popup-cpc-ocpm .tab-menu:after {
+  display: table;
+  content: '';
+}
+.popup-cpc-ocpm .tab-menu:after {
+  clear: both;
+}
+.popup-cpc-ocpm .tab-menu li {
+  float: left;
+}
+.popup-cpc-ocpm .tab-menu li a {
+  display: block;
+  line-height: 23px;
+  background-color: #fff;
+  color: #3b5998;
+  width: 69px;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+.popup-cpc-ocpm .tab-menu li a.active, .popup-cpc-ocpm .tab-menu li a:hover {
+  color: #fff;
+  background-color: #3b5998;
+}
+.popup-cpc-ocpm .cpc p > label,
+.popup-cpc-ocpm .ocpm p > label {
+  color: #3b5998;
+  font-size: 12px;
+  display: inline-block;
+}
+.popup-cpc-ocpm .cpc p {
+  margin-top: 24px;
+}
+.popup-cpc-ocpm .cpc p > label {
+  width: 23px;
+}
+.popup-cpc-ocpm .cpc input[type="text"] {
+  width: 229px;
+}
+.popup-cpc-ocpm .ocpm .list-ocpm li {
+  margin-top: 5px;
+  font-weight: 300;
+}
+.popup-cpc-ocpm .ocpm .list-ocpm li:first-child {
+  margin-top: 15px;
+}
+.popup-cpc-ocpm .ocpm .list-ocpm li input[type="radio"] {
+  margin-right: 5px;
+}
+.popup-cpc-ocpm .ocpm p {
+  margin-top: 5px;
+}
+.popup-cpc-ocpm .ocpm p > label {
+  width: 40px;
+}
+.popup-cpc-ocpm .ocpm p input[type="text"] {
+  width: 212px;
+}
+.popup-cpc-ocpm .ocpm p:first-child {
+  margin-top: 20px;
+}
+.popup-cpc-ocpm:before {
+  top: 49px;
+}
+.popup-cpc-ocpm:after {
+  top: 50px;
+}
+
+.popup-ad-set-name {
+  padding-bottom: 35px;
+}
+.popup-ad-set-name p {
+  margin-top: 28px;
+}
+.popup-ad-set-name p input[type="text"] {
+  width: 212px;
+}
+.popup-ad-set-name p > label {
+  display: inline-block;
+  font-size: 12px;
+  color: #3b5998;
+  text-align: center;
+  width: 40px;
+}
+.popup-ad-set-name:before {
+  top: 27px;
+}
+.popup-ad-set-name:after {
+  top: 28px;
+}
+
+.popup-budget {
+  padding-bottom: 35px;
+}
+.popup-budget p {
+  margin-top: 28px;
+}
+.popup-budget input[type="text"] {
+  width: 217px;
+}
+.popup-budget .label-budget {
+  width: 35px;
+  text-align: center;
+  font-size: 12px;
+  color: #3b5998;
+  display: inline-block;
+}
+.popup-budget:before {
+  top: 74px;
+}
+.popup-budget:after {
+  top: 75px;
 }
 
 /*# sourceMappingURL=manage.css.map */

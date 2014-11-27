@@ -105,19 +105,6 @@ select , input {
 		padding-top : 7px;
 		padding-left : 19px;
 		font-weight : 300;
-		&.auto-optimization-status {
-			border-left : 1px solid #dadada;
-			width : 531px;
-			.title {
-				font-size: 13px;
-				font-weight: 700;
-				color: #3b5998;
-				.btn-view-detail {
-					@include button-style(100,25,13);
-					margin-left : 10px;
-				}
-			}
-		}
 	}
 
 	th,
@@ -159,7 +146,31 @@ select , input {
 			input[type="text"]{
 				width : 335px;
 			}
+			&.auto-optimization-status {
+				border-left : 1px solid #dadada;
+				width : 531px;
+				.title {
+					font-size: 13px;
+					font-weight: 700;
+					color: #3b5998;
+					.btn-view-detail {
+						@include button-style(100,25,13);
+						margin-left : 10px;
+					}
+				}
+				.text {
+					margin-top : 14px;
+					p {
+						line-height : 22px;
+						font-size : 13px;
+						font-weight : 400;
+					}
+				}
+			}
 		}
+
+
+
 	}
 	.period {
 		.date {
@@ -269,9 +280,16 @@ select , input {
 						top : 1px solid #dfdfdf;
 						left : 1px solid #dfdfdf;
 					}
+					text-align : center;
+					strong ,
+					span,
+					input[type="radio"]{
+						vertical-align: middle;
+					}
 					&:first-child {
 						border-left : 0 none;
 					}
+
 				}
 			}
 
@@ -279,30 +297,50 @@ select , input {
 
 		td {
 			height : 48px;
-			text-align : center;
+			font-size : 13px;
 
 			&:first-child {
 				padding-left : 20px;
-				text-align : left;
 			}
 			strong {
 				color : #3b5598;
 				font-weight : 400;
+				font-size : 15px;
 			}
 		}
 	}
 }
-
-
-
 
 .table-manage {
 	.inner {
 		box-sizing : border-box;
 		position : relative;
 	}
+	.user-closed {
+		position : absolute;
+		width : 100%;
+		height : 100%;
+		background-color : rgba(236,236,236,0.4);
+		top : 0;
+		left : 0;
+		text-align : center;
+		> div {
+			@include center-position;
+			p {
+				font-size : 11px;
+				font-weight : 700;
+				color : #3b5998;
+				margin-bottom : 5px;
+			}
+			.btn-restart {
+				@include button-style(68,21,12,#ababab);
+			}
+		}
+	}
 	table {
 		overflow : hidden;
+		margin-top : -10px;
+		margin-left : -10px;
 	}
 	td {
 		padding-left : 10px;
@@ -536,4 +574,500 @@ select , input {
 		}
 	}
 	// tbody END
+}
+
+.campaign-table {
+	.btn-confirm-wrap {
+		margin-bottom : 15px;
+		position : relative;
+		.btn-bid {
+			@include button-style(64,20,12,#404040);
+			&.active {
+				background-color : #fff;
+				color : #404040;
+			}
+		}
+		select {
+			width : 72px;
+			margin-left : 10px;
+			margin-right : 10px;
+		}
+		.btn-min ,
+		.btn-avg ,
+		.btn-max {
+			@include button-style(45,17,12,#404040);
+		}
+		.input-bidding-amount {
+			width : 72px;
+			border : 1px solid #404040;
+			padding : 3px 7px;
+		}
+		.btn-ok {
+			@include button-style(68,22,12,#3b5998);
+			position : absolute;
+			right : 0;
+			top : 1px;
+
+		}
+		> div {
+			display : inline-block;
+			> p {
+				display : inline-block;
+			}
+		}
+	}
+}
+
+
+.popup-dim-overlay {
+	position : fixed;
+	left : 0;
+	top : 0;
+	width : 100%;
+	height : 100%;
+	z-index : 99;
+	background-color : rgba(0,0,0,.5);
+}
+
+.popup-edit-campaign {
+	@include popup-default-style;
+	@include center-position();
+	width : 600px;
+	.popup-container {
+		padding : 24px 17px;
+		input[type="text"]{
+			border : 1px solid #c6c6c6;
+			line-height : 23px;
+			padding : 0 7px;
+		}
+		.tab-menu {
+			@include clfix;
+			li {
+				float : left;
+				margin-left : 1px;
+				&:first-child {
+					margin-left : 0;
+				}
+				a {
+					background-color : #e4e4e4;
+					border-radius : 4px 4px 0 0;
+					color : #3b5998;
+					display : block;
+					text-align : center;
+					line-height : 23px;
+					width : 69px;
+				}
+				&.active {
+					a {
+						background-color : #3b5998;
+						color : #fff;
+					}
+				}
+			}
+		}
+		.schedule ,
+		.budget {
+			border-top : 1px solid #dadada;
+			th {
+				color : #3b5998;
+				font-size : 15px;
+				vertical-align : top;
+				text-align : left;
+				font-weight : 400;
+				width : 78px;
+			}
+		}
+		.schedule {
+			padding : {
+				top : 20px;
+				right : 27px;
+				left : 20px;
+			}
+			.table-popup-edit-campaign-schedule {
+				td {
+					padding-bottom : 7px;
+				}
+				.campaign {
+					input[type="text"]{
+						border : 1px solid #c6c6c6;
+						font-size : 13px;
+						width : 401px;
+						padding : 0 7px;
+						line-height : 23px;
+					}
+				}
+				.date-start {
+					.input-date {
+						background : {
+							image : url(../../images_v1/icon/icon-calendar.png);
+							position : right 5px top 50%;
+							repeat : no-repeat;
+						}
+						width : 200px;
+						padding-right : 22px;
+					}
+					.input-hour,
+					.input-min {
+						width : 33px;
+						text-align : center;
+					}
+					.start-time {
+						margin-bottom : 7px;
+					}
+					.end-time {
+						margin-bottom : 12px;
+					}
+
+				}
+				.exposure-time-set {
+					select {
+						width : 200px;
+						height : 25px;
+					}
+					.time-wrap {
+						margin-top : 13px;
+						margin-bottom : 16px;
+						.time-wrap-heading {
+							@include clfix;
+							margin-bottom : 13px;
+							.text-desc {
+								&:before {
+									content : '';
+									display : inline-block;
+									width : 10px;
+									height : 10px;
+									background-color : #3b5998;
+									margin-right : 5px;
+								}
+							}
+						}
+						.text-hours {
+							margin-top: 5px;
+							span {
+								display: inline-block;
+								width: 45px;
+								font-size: 11px;
+							}
+							.allday {
+								margin-left: 5px;
+							}
+						}
+
+						.time-zone {
+							margin-left : -30px;
+							.day .label, .everyday .label {
+								float: left;
+								width: 30px;
+								height: 30px;
+								line-height: 30px;
+
+								//					text-align: right;
+							}
+							.day .label i, .everyday .label i {
+								font-size: 11px;
+								font-style : normal;
+							}
+							.day {
+								@include clfix;
+								&.first {
+									.times .hour, .all-select-time {
+										border-top: 1px solid #bdbfc4;
+									}
+								}
+
+								.times {
+									float : left;
+									.hour {
+										width: 15px;
+										height: 30px;
+										background-color: #f1f2f6;
+										cursor: pointer;
+										float: left;
+										border-bottom: 1px solid #bdbfc4;
+										border-right: 1px solid #fff;
+										&.first {
+											border-left: 1px solid #bdbfc4;
+										}
+										&.ui-selected {
+											background: -webkit-gradient(linear, center top, center bottom, from(#6279ae), to(#5870a8));
+											background: -webkit-linear-gradient(top, #6279ae, #5870a8);
+											background-color: #5870a8;
+											border-right: 1px solid #6d84b4;
+										}
+										&.nth-child-3 {
+											border-right: 1px solid #bdbfc4;
+										}
+									}
+								}
+								.all-select-time {
+									border-bottom: 1px solid #bdbfc4;
+									border-left: 1px solid #bdbfc4;
+									border-right: 1px solid #bdbfc4;
+									cursor: pointer;
+									float: left;
+									width: 45px;
+									height: 30px;
+									margin-left: 4px;
+									&.ui-selected {
+										background: -webkit-gradient(linear, center top, center bottom, from(#6279ae), to(#5870a8));
+										background: -webkit-linear-gradient(top, #6279ae, #5870a8);
+										background-color: #5870a8;
+									}
+								}
+							}
+							.everyday {
+								margin-top: 5px;
+								.label {
+									font-weight: 700;
+								}
+								.times .every-hour {
+									width: 15px;
+									height: 30px;
+									cursor: pointer;
+									float: left;
+									border-bottom: 1px solid #bdbfc4;
+									border-right: 1px solid #bdbfc4;
+									border-top: 1px solid #bdbfc4;
+									background-color: #fff;
+									&.first {
+										border-left: 1px solid #bdbfc4;
+									}
+									&.ui-selected {
+										background: -webkit-gradient(linear, center top, center bottom, from(#6279ae), to(#5870a8));
+										background: -webkit-linear-gradient(top, #6279ae, #5870a8);
+										background-color: #5870a8;
+										border-right: 1px solid #6d84b4;
+									}
+								}
+							}
+						}
+						.desc {
+							text-align : center;
+							margin-top : 10px;
+							font-weight : 300;
+						}
+					}
+					td {
+						padding-top : 7px;
+					}
+				}
+				.status {
+					select {
+						width : 104px;
+						height : 25px;
+					}
+				}
+			}
+		}
+		.budget {
+			padding-top : 92px;
+			padding-left : 19px;
+			padding-bottom : 87px;
+
+			.table-popup-edit-campaign-budget {
+				th {
+					color : #3b5998;
+				}
+				input[type="text"]{
+					width : 200px;
+				}
+				label {
+					@include button-type-radio(false);
+				}
+				.text {
+					line-height : 17px;
+					margin-top : 15px;
+					.text-color-blue {
+						color : #3b5998;
+					}
+					.text-color-dark-blue {
+						color : #2c4372;
+					}
+				}
+
+			}
+		}
+	}
+	.popup-footer {
+		.btn-edit {
+			@include button-style(100,25,15);
+		}
+		.btn-cancel {
+			@include button-style(100,25,15,#ababab);
+		}
+	}
+}
+
+
+// 툴팁타입의 팝업
+.popup-tooltip-type {
+	background-color : #f0f0f0;
+	border : 1px solid #3b5998;
+	box-sizing : border-box;
+	padding : 13px 15px 15px;
+	position : absolute;
+	width : 308px;
+	z-index : 10;
+	top : -1px;
+	right : -319px;
+	input[type="text"] {
+		padding : 3px 7px;
+	}
+	&:before,
+	&:after {
+		display : block;
+		content : '';
+		position : absolute;
+	}
+	&:before {
+		border-right : 8px solid #3b5998;
+		border-top : 5px solid transparent;
+		border-bottom : 5px solid transparent;
+		left : -9px;
+	}
+	&:after {
+		border-right : 7px solid #f0f0f0;
+		border-top : 4px solid transparent;
+		border-bottom : 4px solid transparent;
+		left : -7px;
+	}
+
+	.popup-tooltip-container {
+		padding : 0 10px;
+	}
+
+	.btn-align-center {
+		margin-top : 25px;
+		text-align : center;
+		.btn-save {
+			@include button-style(55,20,12);
+		}
+		.btn-cancel {
+			@include button-style(55,20,12,#ababab);
+		}
+	}
+}
+.popup-cpc-ocpm {
+	.tab-menu {
+		@include clfix;
+		border-bottom : 1px solid #d4d4d4;
+		li {
+			float : left;
+			a {
+				display : block;
+				line-height : 23px;
+				background-color : #fff;
+				color : #3b5998;
+				width : 69px;
+				text-align : center;
+				border-radius : 5px 5px 0 0;
+				&.active,
+				&:hover {
+					color : #fff;
+					background-color : #3b5998;
+				}
+			}
+		}
+	}
+	.cpc ,
+	.ocpm {
+		p {
+			> label {
+				color : #3b5998;
+				font-size : 12px;
+				display : inline-block;
+			}
+		}
+	}
+	.cpc {
+		p {
+			margin-top : 24px;
+			> label {
+				width : 23px;
+			}
+		}
+		input[type="text"]{
+			width : 229px;
+		}
+	}
+	.ocpm {
+		.list-ocpm {
+			li {
+				margin-top : 5px;
+				font-weight : 300;
+				&:first-child {
+					margin-top : 15px;
+				}
+				input[type="radio"]{
+					margin-right : 5px;
+				}
+			}
+		}
+		p {
+			margin-top : 5px;
+			> label {
+				width : 40px;
+			}
+			input[type="text"]{
+				width : 212px;
+			}
+			&:first-child {
+				margin-top : 20px;
+			}
+		}
+	}
+	&:before {
+		top : 49px;
+	}
+	&:after {
+		top : 50px;
+	}
+}
+
+.popup-ad-set-name {
+	padding-bottom : 35px;
+	p {
+		margin-top : 28px;
+		input[type="text"]{
+			width : 212px;
+		}
+		> label {
+			display : inline-block;
+			font-size :12px;
+			color : #3b5998;
+			text-align : center;
+			width : 40px;
+		}
+
+	}
+	&:before {
+		top : 27px;
+	}
+	&:after {
+		top : 28px;
+	}
+}
+.popup-budget {
+	padding-bottom : 35px;
+	p {
+		margin-top : 28px;
+	}
+
+	input[type="text"]{
+		width : 217px;
+
+	}
+	.label-budget {
+		width: 35px;
+		text-align: center;
+		font-size: 12px;
+		color: #3b5998;
+		display: inline-block;
+	}
+	&:before {
+		top : 74px;
+	}
+	&:after {
+		top : 75px;
+	}
 }

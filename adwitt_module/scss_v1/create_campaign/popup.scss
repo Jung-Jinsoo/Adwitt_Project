@@ -26,7 +26,7 @@
 .popup-creative {
 	@include popup-default-style;
 	@include center-position;
-	width : 1058px;
+	width : 1060px;
 	position : absolute;
 	textarea {
 		resize: none;
@@ -113,6 +113,7 @@
 						p {
 							line-height : 25px;
 						}
+
 					}
 				}
 				td {
@@ -163,10 +164,18 @@
 					td {
 						padding-bottom : 5px;
 						vertical-align : top;
+						position : relative;
 					}
 					input[type="text"] {
 						width : 232px;
 						padding : 3px 7px;
+					}
+					.text-remaining {
+						position : absolute;
+						right : 14px;
+						bottom : 5px;
+						color : #ababab;
+						font-size : 10px;
 					}
 				}
 			}
@@ -679,30 +688,32 @@
 
 	// 플레이스먼트 , Placement
 	.list-placement-box {
+		@include clfix;
 		margin-top : 10px;
 		.popup-content-heading {
-			display : inline-block;
+			float : left;
 			vertical-align : middle;
 			width : 90px;
+			margin-top : 5px;
 		}
 		.list-placement {
 			@include clfix;
-			margin-left: -23px;
-			display : inline-block;
 			vertical-align : middle;
+			float : left;
 
 			>li {
 				float: left;
-				margin-left: 23px;
+				margin-left : 9px;
 				position: relative;
-				.mobile ,
-				.desktop ,
-				.desktop-right {
+				&:first-child {
+					margin-left : 0;
+				}
+				> div {
 					> a {
 						display: block;
 						box-sizing: border-box;
 						border: 1px solid #aeaeae;
-						width: 292px;
+						width: 290px;
 						height: 32px;
 						line-height: 32px;
 						font-size: 12px;
@@ -884,11 +895,42 @@
 						}
 					}
 				}
+				.partner-mobile-app {
+					> a {
+						span {
+							&:after {
+								width: 16px;
+								background-position: 0 -96px;
+							}
+						}
+
+					}
+
+					&:hover ,
+					&.active {
+						> a {
+							background-color : #404040;
+							color : #fff;
+							span {
+								&:after {
+									background-position : 0 -112px;
+								}
+							}
+						}
+					}
+				}
 			}
-		}
-		.chk-merge-all {
-			clear: both;
-			margin-top : 10px;
+
+			// Partner App이 있을때
+			&.has-partner-app {
+				> li {
+					> div {
+						> a{
+							width : 215px;
+						}
+					}
+				}
+			}
 		}
 	}
 
