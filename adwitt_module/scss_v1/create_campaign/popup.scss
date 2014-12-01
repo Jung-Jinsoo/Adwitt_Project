@@ -38,6 +38,45 @@
 		font-family: $base-font;
 	}
 
+	.confirm-contents {
+		.btn-content {
+			text-align : center;
+			padding : 52px 0 61px;
+			.btn-create-new,
+			.btn-choose-existing{
+				@include button-style(269,40,15,#fff,#404040);
+				border : 1px solid #c6c6c6;
+				&:hover {
+					background-color : #404040;
+					color : #fff;
+					border : 1px solid #404040;
+				}
+			}
+			.btn-choose-existing {
+				margin-left : 15px;
+			}
+
+		}
+		.popup-existing-content {
+			padding : 61px 0;
+			label {
+				font-size : 17px;
+				color : #3b5998;
+				vertical-align : middle;
+				width : 73px;
+				display : inline-block;
+			}
+			select {
+				width : 553px;
+				height : 26px;
+			}
+			input[type="text"]{
+				width : 338px;
+				padding : 3px 7px;
+				margin-left : 7px;
+			}
+		}
+	}
 
 	// 탭메뉴 , 탭 , Tab , Tab Menu
 	.tab-popup-creative {
@@ -752,20 +791,21 @@
 						position: absolute;
 						border: 1px solid #b8b8b8;
 						box-sizing: border-box;
-						width: 100%;
 						padding: 21px 21px 21px 19px;
 						border-radius: 5px;
-						top : 40px;
+						bottom : 40px;
 						z-index : 5;
+						right : 0;
+						width : 290px;
 						&:after {
 							content : '';
 							display : block;
-							background : url(../../images_v1/bg/arrow-top.png) no-repeat right 0 top 0;
+							background : url(../../images_v1/bg/arrow-bot.png) no-repeat right 20px top 0;
 							width : 100%;
 							height : 10px;
 							position : absolute;
-							top : -10px;
-							right : 20px;
+							bottom : -10px;
+							left : 0px;
 
 						}
 						select {
@@ -1177,43 +1217,6 @@
 	@include popup-default-style();
 	@include center-position;
 	width : 1060px;
-	.btn-content {
-		text-align : center;
-		padding : 52px 0 61px;
-		.btn-create-new,
-		.btn-choose-existing{
-			@include button-style(269,40,15,#fff,#404040);
-			border : 1px solid #c6c6c6;
-			&:hover {
-				background-color : #404040;
-				color : #fff;
-				border : 1px solid #404040;
-			}
-		}
-		.btn-choose-existing {
-			margin-left : 15px;
-		}
-
-	}
-	.popup-existing-content {
-		padding : 61px 21px;
-		label {
-			font-size : 17px;
-			color : #3b5998;
-			vertical-align : middle;
-			width : 73px;
-			display : inline-block;
-		}
-		select {
-			width : 553px;
-			height : 26px;
-		}
-		input[type="text"]{
-			width : 325px;
-			padding : 3px 7px;
-			margin-left : 7px;
-		}
-	}
 	.btn-popup-back {
 		@include button-style(100,25,15,#a1a1a1);
 	}
