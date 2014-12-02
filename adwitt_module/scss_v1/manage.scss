@@ -281,6 +281,8 @@ select , input {
 						left : 1px solid #dfdfdf;
 					}
 					text-align : center;
+					width : 16.6%;
+
 					strong ,
 					span,
 					input[type="radio"]{
@@ -1054,8 +1056,7 @@ select , input {
 	}
 
 	input[type="text"]{
-		width : 217px;
-
+		width : 75px;
 	}
 	.label-budget {
 		width: 35px;
@@ -1063,6 +1064,13 @@ select , input {
 		font-size: 12px;
 		color: #3b5998;
 		display: inline-block;
+		vertical-align : middle;
+	}
+	.radio-lifetime ,
+	.radio-daily {
+		@include button-type-radio(false);
+		font-size : 12px;
+		background-color : #fff;
 	}
 	&:before {
 		top : 74px;
@@ -1070,6 +1078,7 @@ select , input {
 	&:after {
 		top : 75px;
 	}
+
 }
 
 

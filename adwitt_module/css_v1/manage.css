@@ -2729,6 +2729,7 @@ select, input {
   border-top: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf;
   text-align: center;
+  width: 16.6%;
 }
 .table-manage-campaign-performance table tr.etc td strong,
 .table-manage-campaign-performance table tr.etc td span,
@@ -3591,7 +3592,7 @@ select, input {
   margin-top: 28px;
 }
 .popup-budget input[type="text"] {
-  width: 217px;
+  width: 75px;
 }
 .popup-budget .label-budget {
   width: 35px;
@@ -3599,6 +3600,20 @@ select, input {
   font-size: 12px;
   color: #3b5998;
   display: inline-block;
+  vertical-align: middle;
+}
+.popup-budget .radio-lifetime,
+.popup-budget .radio-daily {
+  display: inline-block;
+  line-height: 23px;
+  border: 1px solid #bcbcbc;
+  font-size: 13px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0 10px 0 6px;
+  vertical-align: middle;
+  font-size: 12px;
+  background-color: #fff;
 }
 .popup-budget:before {
   top: 74px;
