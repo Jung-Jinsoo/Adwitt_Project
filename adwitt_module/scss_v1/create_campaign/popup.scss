@@ -25,11 +25,10 @@
 
 .popup-creative {
 	@include popup-default-style;
+	@include center-position;
 	width : 1060px;
 	position : absolute;
-	left : 50%;
-	margin-left : -530px;
-	top : 100px;
+	
 	textarea {
 		resize: none;
 		width: 100%;
