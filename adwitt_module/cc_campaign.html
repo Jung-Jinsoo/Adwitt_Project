@@ -5,9 +5,12 @@
     <title>Adwitt - Create Campaign - Campaign Content</title>
     <link rel="stylesheet" href="css_v1/reset.css"/>
     <link rel="stylesheet" href="css_v1/cc_campaign.css"/>
+    <link rel="stylesheet" href="./css_v1/jquery-ui.css"/>
+    <link rel="stylesheet" href="./css_v1/jquery-ui.structure.css"/>
     <!--<link rel="stylesheet" href="css_v1/schedule_test.css"/>-->
     <!--<link rel="stylesheet" href="css_v1/jquery.fs.selecter.css"/>-->
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./js_v1/jquery-ui.min.js"></script>
     <script src="js_v1/jquery.tooltipster.min.js"></script>
     <script src="js_v1/schedule.js"></script>
 </head>
@@ -1505,6 +1508,7 @@
             </div>
             <div class="content graph-content">
                 <div class="loading">
+                    <i class="fa fa-exclamation-triangle" style="font-size: 36px;color: #D82727;"></i>
                     <p>Enter your desired date range and frequency cap above</p>
                     <div>
                         <img src="../images_v1/loading-wisebirds.gif" alt=""/>
@@ -4154,6 +4158,8 @@
                 position : 'right'
             });
         });
+
+        $('.input-date').datepicker();
 
         // http://formstone.it/components/selecter
         // Selecter Plugin
