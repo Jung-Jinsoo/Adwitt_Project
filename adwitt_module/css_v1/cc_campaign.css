@@ -2509,16 +2509,11 @@ label {
   border: 1px solid #cbcbcb;
   z-index: 100;
   box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   width: 1060px;
   position: absolute;
+  left: 50%;
+  margin-left: -530px;
+  top: 100px;
 }
 .popup-creative .popup-header {
   background-color: #3b5998;
@@ -2777,7 +2772,6 @@ label {
 .popup-creative .multi-product-content .table-multi-product .table-multi-product-right .image div {
   width: 85px;
   height: 85px;
-  overflow: hidden;
   box-sizing: border-box;
   border: 1px solid #c6c6c6;
   margin: 0 auto;
@@ -2937,12 +2931,13 @@ label {
 .popup-creative .offer-claim-content .reminder-box .popup-content-heading,
 .popup-creative .offer-claim-content .claims-limit-box .popup-content-heading {
   display: inline-block;
+  vertical-align: middle;
 }
 .popup-creative .offer-claim-content .expiration-date-box .input-date {
   background-image: url(../../images_v1/icon/icon-calendar.png);
   background-position: right 5px top 50%;
   background-repeat: no-repeat;
-  width: 200px;
+  width: 180px;
   padding-right: 22px;
 }
 .popup-creative .offer-claim-content .reminder-box {
@@ -2952,7 +2947,7 @@ label {
   background-image: url(../../images_v1/icon/icon-calendar.png);
   background-position: right 5px top 50%;
   background-repeat: no-repeat;
-  width: 200px;
+  width: 180px;
   padding-right: 22px;
 }
 .popup-creative .offer-claim-content .reminder-box .input-hour,
@@ -2960,8 +2955,39 @@ label {
   width: 32px;
   text-align: center;
 }
+.popup-creative .offer-claim-content .reminder-box .colon {
+  margin-left: 3px;
+  margin-right: 3px;
+}
 .popup-creative .offer-claim-content .claims-limit-box {
   text-align: right;
+}
+.popup-creative .offer-claim-content .claims-limit-box .no-limit {
+  display: inline-block;
+  line-height: 23px;
+  border: 1px solid #bcbcbc;
+  font-size: 13px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0 10px 0 6px;
+  vertical-align: middle;
+}
+.popup-creative .offer-claim-content .claims-limit-box .select-limit {
+  display: inline-block;
+  line-height: 23px;
+  border: 1px solid #bcbcbc;
+  font-size: 13px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0 10px 0 6px;
+  vertical-align: middle;
+}
+.popup-creative .offer-claim-content .claims-limit-box .select-limit input[type="text"] {
+  border: 0 none;
+  width: 60px;
+  padding: 0 0 0 3px;
+  position: relative;
+  top: -1px;
 }
 .popup-creative .offer-claim-content .terms-conditions-box {
   margin-bottom: 9px;
@@ -2994,11 +3020,26 @@ label {
   font-size: 13px;
   line-height: 25px;
   box-sizing: border-box;
-  padding-left: 20px;
+  padding-left: 27px;
+  position: relative;
+  font-weight: 300;
+}
+.popup-creative .offer-claim-content .more-option a:before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  background-image: url(../../images_v1/icon/icon-radio_normal.png);
 }
 .popup-creative .offer-claim-content .more-option a.active {
   background-color: #3b5998;
   color: #fff;
+}
+.popup-creative .offer-claim-content .more-option a.active:before {
+  background-image: url(../../images_v1/icon/icon-radio_active.png);
 }
 .popup-creative .offer-claim-content .more-option .row {
   padding: 0 24px;
@@ -3322,7 +3363,7 @@ label {
 }
 .popup-creative .video-content .link-url-box input[type="text"],
 .popup-creative .video-content .display-link-box input[type="text"] {
-  width: 254px;
+  width: 200px;
   padding: 3px 7px;
   margin-left: 5px;
 }
@@ -3462,7 +3503,7 @@ label {
 }
 .popup-creative .website-click-content .description-box input[type="text"],
 .popup-creative .website-click-content .caption-box input[type="text"] {
-  width: 736px;
+  width: 730px;
 }
 .popup-creative .website-click-content .link-url-box {
   margin-top: 16px;
@@ -6599,6 +6640,9 @@ label {
   width: 200px;
   padding-right: 22px;
 }
+.contents.budget-schedule .table-rnf-budget-schedule td.start-date span, .contents.budget-schedule .table-rnf-budget-schedule td.end-date span {
+  vertical-align: middle;
+}
 .contents.budget-schedule .table-rnf-budget-schedule td.frequency-cap {
   position: relative;
 }
@@ -6781,6 +6825,48 @@ label {
   border-width: 1px;
   border-style: solid;
   position: relative;
+}
+.contents.confirm .table-confirm th > div .user-closed,
+.contents.confirm .table-confirm td > div .user-closed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 236, 236, 0.4);
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.contents.confirm .table-confirm th > div .user-closed > div,
+.contents.confirm .table-confirm td > div .user-closed > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.contents.confirm .table-confirm th > div .user-closed > div p,
+.contents.confirm .table-confirm td > div .user-closed > div p {
+  font-size: 11px;
+  font-weight: 700;
+  color: #3b5998;
+  margin-bottom: 5px;
+}
+.contents.confirm .table-confirm th > div .user-closed > div .btn-restart,
+.contents.confirm .table-confirm td > div .user-closed > div .btn-restart {
+  background-color: #ababab;
+  border-radius: 10.5px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  overflow: hidden;
+  text-align: center;
+  width: 68px;
+  font-family: "Roboto Condensed", sans-serif;
 }
 .contents.confirm .table-confirm tr td > div {
   border-color: #3b5998;

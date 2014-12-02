@@ -1901,6 +1901,9 @@
 						width : 200px;
 						padding-right : 22px;
 					}
+					span {
+						vertical-align : middle;
+					}
 				}
 				&.frequency-cap {
 					position : relative;
@@ -2027,6 +2030,27 @@
 						style : solid;
 					}
 					position : relative;
+					.user-closed {
+						position : absolute;
+						width : 100%;
+						height : 100%;
+						background-color : rgba(236,236,236,0.4);
+						top : 0;
+						left : 0;
+						text-align : center;
+						> div {
+							@include center-position;
+							p {
+								font-size : 11px;
+								font-weight : 700;
+								color : #3b5998;
+								margin-bottom : 5px;
+							}
+							.btn-restart {
+								@include button-style(68,21,12,#ababab);
+							}
+						}
+					}
 				}
 			}
 			tr {

@@ -2186,7 +2186,12 @@
                                     <span class="text-left">Reach</span>
                                     <span class="text-right">2,400,000 Users</span>
                                 </p>
-
+                                <div class="user-closed">
+                                    <div>
+                                        <p>User Closed</p>
+                                        <button class="btn-restart" type="button">Restart</button>
+                                    </div>
+                                </div>
                             </div>
                         </td>
                         <td>
@@ -2230,7 +2235,6 @@
     </div>
 
 
-
     <!-- Popup들 -->
 
     <!-- Creative Popup -->
@@ -2243,7 +2247,7 @@
             </div>
             <div class="popup-container">
                 <div class="contents confirm-contents">
-                    <div class="btn-content" style="display : none;">
+                    <div class="btn-content" style="display : block;">
                         <button type="button" class="btn-create-new">Create New</button>
                         <button type="button" class="btn-choose-existing">Choose Existing</button>
                     </div>
@@ -2532,7 +2536,7 @@
                     <!-- //Multi-Product -->
 
                     <!-- 광고타입이 Offer Claim 일경우 -->
-                    <div class="content offer-claim-content" style="display : none;">
+                    <div class="content offer-claim-content" style="display : block;">
                         <div class="title-box">
                             <div class="popup-content-heading">
                                 <p>
@@ -2722,8 +2726,8 @@
                                     </p>
                                 </div>
 
-                                <label><input type="radio" name="" id=""/>No Limit</label>
-                                <label><input type="radio" name="" id=""/><input type="text" name="" id="" value="100,000"/></label>
+                                <label class="no-limit"><input type="radio" name="" id=""/> No Limit</label>
+                                <label class="select-limit"><input type="radio" name="" id=""/><input type="text" name="" id="" value="100,000"/></label>
                             </div>
                         </div>
                         <div class="terms-conditions-box">
@@ -2759,7 +2763,7 @@
                             </div>
                         </div>
                         <div class="more-option">
-                            <a href="#" class="active">More Option</a>
+                            <a href="#" class="active">More Options</a>
                             <div class="row">
                                 <div class="bar-code-box">
                                     <div class="popup-content-heading">
@@ -2785,7 +2789,7 @@
                     <!-- //Offer Claim -->
 
                     <!-- 광고타입이 Photo 일 경우 -->
-                    <div class="content photo-content" style="display : none;">
+                    <div class="content photo-content" style="display : block;">
                         <div class="text-box">
                             <div class="popup-content-heading">
                                 <p>
@@ -2941,7 +2945,7 @@
                     <!-- //Photo -->
 
                     <!-- 광고타입이 Video 일 경우-->
-                    <div class="content video-content" style="display : none;">
+                    <div class="content video-content" style="display : block;">
                         <div class="text-box">
                             <div class="popup-content-heading">
                                 <p>
@@ -3149,7 +3153,7 @@
                     <!-- //Video-->
 
                     <!-- 광고타입이 Website Click 일 경우 -->
-                    <div class="content website-click-content" style="display : none;">
+                    <div class="content website-click-content" style="display : block;">
                         <div class="text-box">
                             <div class="popup-content-heading">
                                 <p>
@@ -3351,7 +3355,7 @@
                     <!-- //Website Click -->
 
                     <!-- 광고타입이 Status 일 경우 -->
-                    <div class="content status-content" style="display : none;">
+                    <div class="content status-content" style="display : block;">
                         <div class="text-box">
                             <div class="popup-content-heading">
                                 <p>
@@ -3367,7 +3371,7 @@
                     <!-- //Status -->
 
                     <!-- 광고타입이 App install 일 경우 -->
-                    <div class="content app-install-content" style="display : none;">
+                    <div class="content app-install-content" style="display : block;">
 
                         <div class="photo" style="display : none;">
 
@@ -3773,6 +3777,8 @@
                     <!-- App Install-->
 
                     <!-- Placement : 모든곳에 공통적으로 들어갑니다. -->
+
+                    <!-- 기본 타입 (3개 일경우) -->
                     <div class="list-placement-box">
                         <div class="popup-content-heading">
                             <p>
@@ -3838,6 +3844,8 @@
                             </li>
                         </ul>
                     </div>
+
+                    <!-- 파트너 모바일 앱 타입 (4개일 경우) -->
                     <div class="list-placement-box">
                         <div class="popup-content-heading">
                             <p>
@@ -4040,406 +4048,6 @@
     </div>
 
 
-    <div style="display : none;">
-        <div class="popup-edit-campaign">
-            <div class="popup-header">
-                <h5>
-                    Edit Campaign
-                </h5>
-            </div>
-
-            <div class="popup-container">
-                <ul class="tab-menu">
-                    <li class="active">
-                        <a href="#">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="#">Budget</a>
-                    </li>
-                </ul>
-
-                <div>
-                    <div class="schedule" style="display : none;">
-
-                        <div class="table-popup-edit-campaign-schedule">
-                            <table>
-                                <tr class="campaign">
-                                    <th>Campaign</th>
-                                    <td><input type="text" name="" id=""/></td>
-                                </tr>
-                                <tr class="date-start">
-                                    <th>Date Start</th>
-                                    <td>
-                                        <p class="start-time">
-                                            <input type="text" class="input-date" name="" id=""/>
-                                            <input type="text" class="input-hour" name="" id=""/>
-                                            <input type="text" class="input-min" name="" id=""/>
-                                        </p>
-                                        <p class="end-time">
-                                            <input type="text" class="input-date" name="" id=""/>
-                                            <input type="text" class="input-hour" name="" id=""/>
-                                            <input type="text" class="input-min" name="" id=""/>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input type="checkbox" name="" id=""/>
-                                                Run my campaign continuously from the date start
-                                            </label>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr class="exposure-time-set">
-                                    <th>Exposure Time-Set</th>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value=""></option>
-                                        </select>
-                                        <div class="time-wrap" style="display: block;">
-                                            <div class="time-wrap-heading">
-                                                <p class="text-desc">
-                                                    Scheduled hours are shaded blue
-                                                </p>
-                                            </div>
-                                            <div class="time-zone first">
-                                                <div class="day first">
-                                                    <div class="label">
-                                                        <i>
-                                                            Mon
-                                                        </i>
-                                                    </div>
-                                                    <div class="times day1">
-                                                        <span class="hour time0 first"></span>
-                                                        <span class="hour time1"></span>
-                                                        <span class="hour time2 nth-child-3"></span>
-
-                                                        <span class="hour time3"></span>
-                                                        <span class="hour time4"></span>
-                                                        <span class="hour time5 nth-child-3"></span>
-
-                                                        <span class="hour time6"></span>
-                                                        <span class="hour time7"></span>
-                                                        <span class="hour time8 nth-child-3"></span>
-
-                                                        <span class="hour time9"></span>
-                                                        <span class="hour time10"></span>
-                                                        <span class="hour time11 nth-child-3"></span>
-
-                                                        <span class="hour time12"></span>
-                                                        <span class="hour time13"></span>
-                                                        <span class="hour time14 nth-child-3"></span>
-
-                                                        <span class="hour time15"></span>
-                                                        <span class="hour time16"></span>
-                                                        <span class="hour time17 nth-child-3"></span>
-
-                                                        <span class="hour time18"></span>
-                                                        <span class="hour time19"></span>
-                                                        <span class="hour time20 nth-child-3"></span>
-
-                                                        <span class="hour time21"></span>
-                                                        <span class="hour time22"></span>
-                                                        <span class="hour time23 nth-child-3"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="day">
-                                                    <div class="label">
-                                                        <i>
-                                                            Tue
-                                                        </i>
-                                                    </div>
-                                                    <div class="times day2">
-                                                        <span class="hour time0 first"></span>
-                                                        <span class="hour time1"></span>
-                                                        <span class="hour time2 nth-child-3"></span>
-
-                                                        <span class="hour time3"></span>
-                                                        <span class="hour time4"></span>
-                                                        <span class="hour time5 nth-child-3"></span>
-
-                                                        <span class="hour time6"></span>
-                                                        <span class="hour time7"></span>
-                                                        <span class="hour time8 nth-child-3"></span>
-
-                                                        <span class="hour time9"></span>
-                                                        <span class="hour time10"></span>
-                                                        <span class="hour time11 nth-child-3"></span>
-
-                                                        <span class="hour time12"></span>
-                                                        <span class="hour time13"></span>
-                                                        <span class="hour time14 nth-child-3"></span>
-
-                                                        <span class="hour time15"></span>
-                                                        <span class="hour time16"></span>
-                                                        <span class="hour time17 nth-child-3"></span>
-
-                                                        <span class="hour time18"></span>
-                                                        <span class="hour time19"></span>
-                                                        <span class="hour time20 nth-child-3"></span>
-
-                                                        <span class="hour time21"></span>
-                                                        <span class="hour time22"></span>
-                                                        <span class="hour time23 nth-child-3"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="day">
-                                                    <div class="label">
-                                                        <i>
-                                                            Wed
-                                                        </i>
-                                                    </div>
-                                                    <div class="times day3">
-                                                        <span class="hour time0 first"></span>
-                                                        <span class="hour time1"></span>
-                                                        <span class="hour time2 nth-child-3"></span>
-
-                                                        <span class="hour time3"></span>
-                                                        <span class="hour time4"></span>
-                                                        <span class="hour time5 nth-child-3"></span>
-
-                                                        <span class="hour time6"></span>
-                                                        <span class="hour time7"></span>
-                                                        <span class="hour time8 nth-child-3"></span>
-
-                                                        <span class="hour time9"></span>
-                                                        <span class="hour time10"></span>
-                                                        <span class="hour time11 nth-child-3"></span>
-
-                                                        <span class="hour time12"></span>
-                                                        <span class="hour time13"></span>
-                                                        <span class="hour time14 nth-child-3"></span>
-
-                                                        <span class="hour time15"></span>
-                                                        <span class="hour time16"></span>
-                                                        <span class="hour time17 nth-child-3"></span>
-
-                                                        <span class="hour time18"></span>
-                                                        <span class="hour time19"></span>
-                                                        <span class="hour time20 nth-child-3"></span>
-
-                                                        <span class="hour time21"></span>
-                                                        <span class="hour time22"></span>
-                                                        <span class="hour time23 nth-child-3"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="day">
-                                                    <div class="label">
-                                                        <i>
-                                                            Thu
-                                                        </i>
-                                                    </div>
-                                                    <div class="times day4">
-                                                        <span class="hour time0 first"></span>
-                                                        <span class="hour time1"></span>
-                                                        <span class="hour time2 nth-child-3"></span>
-
-                                                        <span class="hour time3"></span>
-                                                        <span class="hour time4"></span>
-                                                        <span class="hour time5 nth-child-3"></span>
-
-                                                        <span class="hour time6"></span>
-                                                        <span class="hour time7"></span>
-                                                        <span class="hour time8 nth-child-3"></span>
-
-                                                        <span class="hour time9"></span>
-                                                        <span class="hour time10"></span>
-                                                        <span class="hour time11 nth-child-3"></span>
-
-                                                        <span class="hour time12"></span>
-                                                        <span class="hour time13"></span>
-                                                        <span class="hour time14 nth-child-3"></span>
-
-                                                        <span class="hour time15"></span>
-                                                        <span class="hour time16"></span>
-                                                        <span class="hour time17 nth-child-3"></span>
-
-                                                        <span class="hour time18"></span>
-                                                        <span class="hour time19"></span>
-                                                        <span class="hour time20 nth-child-3"></span>
-
-                                                        <span class="hour time21"></span>
-                                                        <span class="hour time22"></span>
-                                                        <span class="hour time23 nth-child-3"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="day">
-                                                    <div class="label">
-                                                        <i>
-                                                            Fri
-                                                        </i>
-                                                    </div>
-                                                    <div class="times day5">
-                                                        <span class="hour time0 first"></span>
-                                                        <span class="hour time1"></span>
-                                                        <span class="hour time2 nth-child-3"></span>
-
-                                                        <span class="hour time3"></span>
-                                                        <span class="hour time4"></span>
-                                                        <span class="hour time5 nth-child-3"></span>
-
-                                                        <span class="hour time6"></span>
-                                                        <span class="hour time7"></span>
-                                                        <span class="hour time8 nth-child-3"></span>
-
-                                                        <span class="hour time9"></span>
-                                                        <span class="hour time10"></span>
-                                                        <span class="hour time11 nth-child-3"></span>
-
-                                                        <span class="hour time12"></span>
-                                                        <span class="hour time13"></span>
-                                                        <span class="hour time14 nth-child-3"></span>
-
-                                                        <span class="hour time15"></span>
-                                                        <span class="hour time16"></span>
-                                                        <span class="hour time17 nth-child-3"></span>
-
-                                                        <span class="hour time18"></span>
-                                                        <span class="hour time19"></span>
-                                                        <span class="hour time20 nth-child-3"></span>
-
-                                                        <span class="hour time21"></span>
-                                                        <span class="hour time22"></span>
-                                                        <span class="hour time23 nth-child-3"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="day">
-                                                    <div class="label">
-                                                        <i>
-                                                            Sat
-                                                        </i>
-                                                    </div>
-                                                    <div class="times day6">
-                                                        <span class="hour time0 first"></span>
-                                                        <span class="hour time1"></span>
-                                                        <span class="hour time2 nth-child-3"></span>
-
-                                                        <span class="hour time3"></span>
-                                                        <span class="hour time4"></span>
-                                                        <span class="hour time5 nth-child-3"></span>
-
-                                                        <span class="hour time6"></span>
-                                                        <span class="hour time7"></span>
-                                                        <span class="hour time8 nth-child-3"></span>
-
-                                                        <span class="hour time9"></span>
-                                                        <span class="hour time10"></span>
-                                                        <span class="hour time11 nth-child-3"></span>
-
-                                                        <span class="hour time12"></span>
-                                                        <span class="hour time13"></span>
-                                                        <span class="hour time14 nth-child-3"></span>
-
-                                                        <span class="hour time15"></span>
-                                                        <span class="hour time16"></span>
-                                                        <span class="hour time17 nth-child-3"></span>
-
-                                                        <span class="hour time18"></span>
-                                                        <span class="hour time19"></span>
-                                                        <span class="hour time20 nth-child-3"></span>
-
-                                                        <span class="hour time21"></span>
-                                                        <span class="hour time22"></span>
-                                                        <span class="hour time23 nth-child-3"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="day">
-                                                    <div class="label">
-                                                        <i>
-                                                            Sun
-                                                        </i>
-                                                    </div>
-                                                    <div class="times day0">
-                                                        <span class="hour time0 first"></span>
-                                                        <span class="hour time1"></span>
-                                                        <span class="hour time2 nth-child-3"></span>
-
-                                                        <span class="hour time3"></span>
-                                                        <span class="hour time4"></span>
-                                                        <span class="hour time5 nth-child-3"></span>
-
-                                                        <span class="hour time6"></span>
-                                                        <span class="hour time7"></span>
-                                                        <span class="hour time8 nth-child-3"></span>
-
-                                                        <span class="hour time9"></span>
-                                                        <span class="hour time10"></span>
-                                                        <span class="hour time11 nth-child-3"></span>
-
-                                                        <span class="hour time12"></span>
-                                                        <span class="hour time13"></span>
-                                                        <span class="hour time14 nth-child-3"></span>
-
-                                                        <span class="hour time15"></span>
-                                                        <span class="hour time16"></span>
-                                                        <span class="hour time17 nth-child-3"></span>
-
-                                                        <span class="hour time18"></span>
-                                                        <span class="hour time19"></span>
-                                                        <span class="hour time20 nth-child-3"></span>
-
-                                                        <span class="hour time21"></span>
-                                                        <span class="hour time22"></span>
-                                                        <span class="hour time23 nth-child-3"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-hours">
-                                                <span>12am</span>
-                                                <span>3am</span>
-                                                <span>6am</span>
-                                                <span>9am</span>
-                                                <span>12pm</span>
-                                                <span>3pm</span>
-                                                <span>6pm</span>
-                                                <span>9pm</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="status">
-                                    <th>Status</th>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="">Active</option>
-                                            <option value="">Pause</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="budget">
-                        <div class="table-popup-edit-campaign-budget">
-                            <table>
-                                <tr>
-                                    <th>Budget</th>
-                                    <td>
-                                        <input type="text" name="" id=""/>
-                                        <label><input type="radio" name="" id=""/> Lifetime</label>
-                                        <label><input type="radio" name="" id=""/> Daily</label>
-                                        <p class="text">
-                                            Note: If you change your budget more than <span class="text-color-blue">3 times within 30 min,</span><br/>
-                                            your account will be blocked for <span class="text-color-dark-blue">2 hours</span> followed by Facebook policy.
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="popup-footer">
-                <button class="btn-edit" type="button">Edit</button>
-                <button class="btn-cancel" type="button">Cancel</button>
-            </div>
-            <a href="#" class="btn-popup-close">Popup Close</a>
-        </div>
-    </div>
-
-
     <div class="arrow-next" style="left : 100px;">
         <p>NEXT버튼에 붙는거 : 스타일 속성은 임시로 넣었음. 꼭 지울것</p>
     </div>
@@ -4463,7 +4071,6 @@
                         _this.attr('data-value',1);
                         $('.popup-creative')
                                 .css({
-                                    'position' : 'fixed'
                                 })
                                 .parent()
                                 .show();

@@ -25,9 +25,11 @@
 
 .popup-creative {
 	@include popup-default-style;
-	@include center-position;
 	width : 1060px;
 	position : absolute;
+	left : 50%;
+	margin-left : -530px;
+	top : 100px;
 	textarea {
 		resize: none;
 		width: 100%;
@@ -182,7 +184,6 @@
 					div {
 						width : 85px;
 						height : 85px;
-						overflow : hidden;
 						box-sizing : border-box;
 						border : 1px solid #c6c6c6;
 						margin : 0 auto;
@@ -266,6 +267,7 @@
 			margin-bottom : 20px;
 			.popup-content-heading {
 				display : inline-block;
+				vertical-align : middle;
 
 			}
 
@@ -278,7 +280,7 @@
 					position : right 5px top 50%;
 					repeat : no-repeat;
 				}
-				width : 200px;
+				width : 180px;
 				padding-right : 22px;
 			}
 		}
@@ -290,7 +292,7 @@
 					position : right 5px top 50%;
 					repeat : no-repeat;
 				}
-				width : 200px;
+				width : 180px;
 				padding-right : 22px;
 			}
 			.input-hour,
@@ -298,11 +300,27 @@
 				width : 32px;
 				text-align : center;
 			}
+			.colon {
+				margin-left : 3px;
+				margin-right : 3px;
+			}
 		}
 		.claims-limit-box {
 			text-align : right;
+			.no-limit {
+				@include button-type-radio(false);
+			}
+			.select-limit {
+				@include button-type-radio(false);
+				input[type="text"] {
+					border : 0 none;
+					width : 60px;
+					padding : 0 0 0 3px;
+					position : relative;
+					top : -1px;
+				}
+			}
 		}
-
 		.terms-conditions-box {
 			margin-bottom : 9px;
 			input[type="text"]{
@@ -335,12 +353,28 @@
 				font-size : 13px;
 				line-height : 25px;
 				box-sizing : border-box;
-				padding-left : 20px;
+				padding-left : 27px;
+				position : relative;
+				font-weight : 300;
+				&:before {
+					content : '';
+					display : block;
+					width : 13px;
+					height : 13px;
+					position : absolute;
+					left : 7px;
+					top : 6px;
+					background-image : url(../../images_v1/icon/icon-radio_normal.png);
+				}
 				&.active {
 					background-color : #3b5998;
 					color : #fff;
+					&:before {
+						background-image : url(../../images_v1/icon/icon-radio_active.png);
+					}
 				}
 			}
+
 			.row {
 				padding : 0 24px;
 			}
@@ -495,7 +529,7 @@
 				font-size : 13px;
 			}
 			input[type="text"]{
-				width : 254px;
+				width : 200px;
 				padding : 3px 7px;
 				margin-left : 5px;
 			}
@@ -564,7 +598,7 @@
 		.description-box ,
 		.caption-box {
 			input[type="text"]{
-				width : 736px;
+				width : 730px;
 			}
 		}
 
@@ -1292,3 +1326,4 @@
 		}
 	}
 }
+
